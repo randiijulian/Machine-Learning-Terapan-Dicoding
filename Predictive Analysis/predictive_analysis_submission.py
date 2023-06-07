@@ -379,3 +379,7 @@ for name, model in model_dict.items():
     pred_dict['prediksi_'+name] = model.predict(prediksi).round(1)
  
 pd.DataFrame(pred_dict)
+
+#Menghitung 10% Nilai Mean Squared Error (MSE)
+mse.target = (home_data['price'].max() - home_data['price'].min()) * 10/100
+print(mse.target)
