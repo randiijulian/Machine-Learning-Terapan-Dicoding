@@ -86,7 +86,7 @@ Gambar 13: multivariate analysis variabel stops, duration, days_left terhadap pr
 
 Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel stops, duration dan days_left kurang memiliki korelasi dengan price.
 
-![correlation matrix](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/Images/correlation%20matrix.png?raw=true)
+![correlation matrix](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/98e283e1-2e41-45da-a742-ac47e8d81da1?raw=true)
 
 Gambar 14: Correlation Matrix
 
