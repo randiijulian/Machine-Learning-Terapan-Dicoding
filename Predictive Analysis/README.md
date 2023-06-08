@@ -81,19 +81,19 @@ Berdasarkan hasil visualisasi, maka dapat dibuat kesimpulan sebagai berikut:
 
 ![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
-Gambar 9: multivariate analysis antara variabel airline dengan price
+Gambar 9: multivariate analysis antara variabel cut dengan price
 
 Berdasarkan hasil visualisasi, variabel airline memiliki korelasi yang kuat terhadap price.
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/fd4bcaa1-d573-4dba-94bf-4036c9889214?raw=true)
+![image](https://user-images.githubusercontent.com/81604461/244477024-fd4bcaa1-d573-4dba-94bf-4036c9889214.png?raw=true)
 
-Gambar 10: multivariate analysis antara variabel source_city dengan price
+Gambar 10: multivariate analysis antara variabel color dengan price
 
 Berdasarkan hasil visualisasi, variabel source city kurang memiliki korelasi terhadap price.
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/ff8ab1f5-ae2b-4af4-8afa-7e446685cbc5?raw=true)
+![image](https://user-images.githubusercontent.com/81604461/244477030-ff8ab1f5-ae2b-4af4-8afa-7e446685cbc5.png?raw=true)
 
-Gambar 11: multivariate analysis antara variabel departure_time dengan price
+Gambar 11: multivariate analysis antara variabel clarity dengan price
 
 Berdasarkan hasil visualisasi, variabel departure_time cukup memiliki korelasi terhadap price.
 
