@@ -48,7 +48,7 @@ Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data
 
 ![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/276e4658-75ef-4481-8d9f-bcd0c680b095?raw=true)
 
-Gambar 4: univariate analysis pada variabel source_city
+Gambar 4: multivariate analysis antara variabel cut dengan price
 
 Berdasarkan hasil visualisasi, Delhi memiliki jumlah data yang paling banyak dibandingkan dengan kota keberangkatan lainnya, sedangkan Chennai memiliki jumlah data yang paling sedikit dibandingkan dengan kota keberangkatan lainnya.
 
