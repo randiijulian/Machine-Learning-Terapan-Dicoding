@@ -48,31 +48,31 @@ Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data
 
 ![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
-Gambar 9: multivariate analysis antara variabel cut dengan price
+Gambar 4: multivariate analysis antara variabel cut dengan price
 
 Berdasarkan hasil visualisasi, variabel airline memiliki korelasi yang kuat terhadap price.
 
 ![image](https://user-images.githubusercontent.com/81604461/244477024-fd4bcaa1-d573-4dba-94bf-4036c9889214.png?raw=true)
 
-Gambar 10: multivariate analysis antara variabel color dengan price
+Gambar 5: multivariate analysis antara variabel color dengan price
 
 Berdasarkan hasil visualisasi, variabel source city kurang memiliki korelasi terhadap price.
 
 ![image](https://user-images.githubusercontent.com/81604461/244477030-ff8ab1f5-ae2b-4af4-8afa-7e446685cbc5.png?raw=true)
 
-Gambar 11: multivariate analysis antara variabel clarity dengan price
+Gambar 6: multivariate analysis antara variabel clarity dengan price
 
 Berdasarkan hasil visualisasi, variabel departure_time cukup memiliki korelasi terhadap price.
 
 ![image](https://user-images.githubusercontent.com/122204998/215325927-c2e1f93b-f6de-4eb4-adf4-ddf382d952cb.png)
 
-Gambar 12: multivariate analysis antara variabel arrival_time dengan price
+Gambar 7: multivariate analysis antara variabel arrival_time dengan price
 
 Berdasarkan hasil visualisasi, variabel arrival_time cukup memiliki korelasi terhadap price.
 
 ![image](https://user-images.githubusercontent.com/122204998/215326002-60fecf19-efc5-4213-813b-ab022cff7bef.png)
 
-Gambar 13: multivariate analysis antara variabel destination_city dengan price
+Gambar 8: multivariate analysis antara variabel destination_city dengan price
 
 Berdasarkan hasil visualisasi, variabel destination_city kurang memiliki korelasi terhadap price.
 
@@ -82,15 +82,15 @@ Berdasarkan hasil visualiasi, variabel class memiliki korelasi yang kuat terhada
 
 ![image](https://user-images.githubusercontent.com/81604461/244478177-d5e8d1d0-221b-43e7-a516-f3eef984be8f.png?raw=true)
 
-Gambar 13: multivariate analysis variabel stops, duration, days_left terhadap price
+Gambar 9: multivariate analysis variabel stops, duration, days_left terhadap price
 
 Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel stops, duration dan days_left kurang memiliki korelasi dengan price.
 
-![correlation matrix](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/98e283e1-2e41-45da-a742-ac47e8d81da1?raw=true)
+![correlation matrix](https://user-images.githubusercontent.com/81604461/244479558-98e283e1-2e41-45da-a742-ac47e8d81da1.png?raw=true)
 
-Gambar 14: Correlation Matrix
+Gambar 10: Correlation Matrix
 
-Bila kita lihat, bahwa korelasi variabel stops terhadap price = 0.12, korelasi variabel duration terhadap price = 0.22, sedangkan korelasi variabel days_left terhadap price sebesar 0.09.
+Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelasi variabel table terhadap price = 0.14.
 
 **Proses *Data Preparation***: 
 - Proses data preparation dilakukan melalui langkah-langkah, yaitu sebagai berikut: Melakukan *load* data pada *google colaboratory*, kemudian melakukan analisis awal terkait variabel yang sangat tidak relevan untuk diproses lebih lanjut. Selanjutnya, memahami makna-makna variabel dengan menerapkan *Exploratory Data Analysis*, kemudian melakukan visualisasi data untuk mencari outlier dengan menggunakan *boxplot* dari *library seaborn*. Selanjutnya, menerapkan metode IQR untuk mengeliminasi outlier, kemudian menggunakan *univariate analysis* serta *multivariative analysis*. Selanjutnya membuat *correlation matrix*, kemudian membuang variabel numberik yang memiliki korelasi rendah terhadap variabel *price.*
