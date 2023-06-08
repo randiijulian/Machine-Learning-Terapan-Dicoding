@@ -2,15 +2,20 @@
 ## *Business Understanding*
 ## *Data Understanding*
 ## *Data Preparation*
+### *Exploratory Data Analysis*
+#### *Exploratory Data Analysis - Data Cleansing*
+#### *Exploratory Data Analysis - Univariate Analysis*
+#### *Exploratory Data Analysis - Multivariate Analysis*
+### *Splitting Data*
 ## *Modeling*
 ## *Evaluation*
 Tabel 1: Hasil Evaluasi Model dengan Menggunakan Mean Squared Error
-Model                        |    train     |     test	    |
+Model                        | train        | test	        |
 ---------------------------- | -----------  | ------------ |
-Extra Trees Regressor        |   0.054081 	 |  149.967816  |
-Lasso Regression             |  558.32874	  |  555.515268  |
-Lasso Least Angle Regression |  558.328177  |  555.515686  |
-Elastic Net                  |  837.14892   |  831.40399   |
+Extra Trees Regressor        | 0.054081 	   | 149.967816   |
+Lasso Regression             | 558.32874	   | 555.515268   |
+Lasso Least Angle Regression | 558.328177   | 555.515686   |
+Elastic Net                  | 837.14892    | 831.40399    |
 - Metrik yang digunakan untuk mengukur hasil *training* adalah *mean squared error (MSE)*. 
 - Berdasarkan hasil training, bahwa model *Extra Trees Regressor* menghasilan nilai MSE pada saat *training* = 0.054081 dan pada saat tes = 149.967816. 
 - Berdasarkan hasil training model, maka ditetapkan bahwa algoritma yang terbaik diantara *Extra Trees Regressor* sedangkan *Lasso Regression* dan *Lasso Least Angle Regression* memiliki performa yang tidak terpaut jauh dalam memprediksi harga diamonds, yaitu algoritma *Extra Trees Regressor*.\
