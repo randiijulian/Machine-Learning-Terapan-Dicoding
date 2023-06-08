@@ -28,7 +28,7 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 
 ### **Hasil Exploratory Data Analysis**
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/Images/cut.png?raw=true)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/73c27ede-0132-4b89-ba81-0fc51939493a?raw=true)
 
 Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
