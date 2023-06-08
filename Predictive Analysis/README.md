@@ -52,33 +52,6 @@ Gambar 4: univariate analysis pada variabel source_city
 
 Berdasarkan hasil visualisasi, Delhi memiliki jumlah data yang paling banyak dibandingkan dengan kota keberangkatan lainnya, sedangkan Chennai memiliki jumlah data yang paling sedikit dibandingkan dengan kota keberangkatan lainnya.
 
-![image](https://user-images.githubusercontent.com/122204998/215276030-75013578-016d-4d3b-94cf-da7fe78773d1.png)
-
-Gambar 5: univariate analysis pada variabel departure_time
-
-Berdasarkan hasil visualisasi, waktu keberangkatan pagi (morning) memiliki jumlah data yang paling banyak dibandingkan dengan kota keberangkatan lainnya, namun masih relatif seimbang, kecuali waktu keberangkatan tengah malam memiliki jumlah data yang sangat sedikit dibandingkan dengan waktu keberangkatan lainnya.
-
-![image](https://user-images.githubusercontent.com/122204998/215276157-c79c42f4-555d-45c8-ab5c-b8197aaaf718.png)
-
-Gambar 6: univariate analysis pada variabel destination_city
-
-Berdasarkan hasil visualisasi, waktu keberangkatan pagi (morning) memiliki jumlah data yang paling banyak dibandingkan dengan kota keberangkatan lainnya, namun masih relatif seimbang, kecuali waktu keberangkatan tengah malam memiliki jumlah data yang sangat sedikit dibandingkan dengan waktu keberangkatan lainnya.
-
-![image](https://user-images.githubusercontent.com/122204998/215276300-e37a7db7-8f6e-4e12-b292-c422cf019d08.png)
-
-Gambar 7: univariate analysis pada variabel class
-
-Berdasarkan hasil visualisasi, kelas ekonomi mendominasi jumlah data di dalam dataset, dibandingkan dengan kelas bisnis.
-
-![image](https://user-images.githubusercontent.com/122204998/215276447-0869bef6-e328-41f0-9258-47fbe7260974.png)
-
-Gambar 8: univariate analysis pada stops, duration, variabel days_left, price dengan menggunakan histogram
-
-Berdasarkan hasil visualisasi, maka dapat dibuat kesimpulan sebagai berikut:
-- kebanyakan pesawat melakukan transit sebanyak satu kali.
-- semakin cepat waktu penerbangan, maka harga tiket pesawat semakin mahal.
-- variabel days_left tidak begitu berpengaruh pada harga tiket pesawat.
-
 ![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
 Gambar 9: multivariate analysis antara variabel cut dengan price
