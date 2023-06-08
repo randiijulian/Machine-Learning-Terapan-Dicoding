@@ -3,7 +3,7 @@
 ## *Data Understanding*
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
 
-### Variabel-variabel yang terdapat dalam dataset Flight Price Prediction:
+### Variabel-variabel yang terdapat dalam dataset Diamonds:
 - carat = kadar carat pada benda
 - cut = jenis potongan
 - color = warna pada diamonds
@@ -27,11 +27,11 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 8. Membuat *correlation matrix* untuk fitur numerik.
 9. Mengeliminasi variabel numerik yang memiliki korelasi rendah terhadap variabel *price*.
 
-**Hasil Exploratory Data Analysis**
+### **Hasil Exploratory Data Analysis**
 
-![image](**https://user-images.githubusercontent.com/122204998/215275455-f83febae-e954-485f-bd9b-afd26be84f18.png**)
+![image](**https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/color.png?raw=true**)
 
-Gambar 1: visualisasi variabel duration dengan menggunakan boxplot
+Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, terlihat terdapat outliers dalam variabel duration. Alasannya, karena terdapat data yang terdapat melebihi Quartil 3.
 
@@ -47,7 +47,7 @@ Gambar 3: univariate analysis pada variabel airline
 
 Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data yang paling banyak dibandingkan dengan masakapai penerbangan lainnya, sedangkan maskapai penerbangan SpiceJet memiliki jumlah data yang paling sedikit dibandingkan dengan maskapai penerbangan lainnya.
 
-![image](https://user-images.githubusercontent.com/122204998/215275873-b6947df9-135d-405c-b645-7733db19a332.png)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/color.png?raw=true)
 
 Gambar 4: univariate analysis pada variabel source_city
 
