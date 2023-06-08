@@ -28,7 +28,7 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 
 ### **Hasil Exploratory Data Analysis**
 
-![alt text](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/Images/cut.png?raw=true)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/Images/cut.png?raw=true)
 
 Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
@@ -119,7 +119,7 @@ Gambar 13: multivariate analysis variabel stops, duration, days_left terhadap pr
 
 Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel stops, duration dan days_left kurang memiliki korelasi dengan price.
 
-![correlation matrix](https://user-images.githubusercontent.com/122204998/215327123-a9d84239-f9c7-467a-b853-7eceb68719fe.jpg)
+![correlation matrix](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/Images/correlation%20matrix.png?raw=true)
 
 Gambar 14: Correlation Matrix
 
