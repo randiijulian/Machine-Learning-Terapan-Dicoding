@@ -46,7 +46,7 @@ Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data yang paling banyak dibandingkan dengan masakapai penerbangan lainnya, sedangkan maskapai penerbangan SpiceJet memiliki jumlah data yang paling sedikit dibandingkan dengan maskapai penerbangan lainnya.
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/color.png?raw=true)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/276e4658-75ef-4481-8d9f-bcd0c680b095?raw=true)
 
 Gambar 4: univariate analysis pada variabel source_city
 
