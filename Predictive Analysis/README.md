@@ -112,21 +112,21 @@ Demi mendapatkan hasil yang terbaik, selain menggunakan Extra Trees Regressor, d
     - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
     - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
-Parameter yang digunakan dalam **Lasso Least Angle Regression**, yaitu sebagai berikut:
-Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
-learning_rate= parameter yang digunakan untuk mengatur proses training dari algoritma ini. Pada model ini, paramater di isi 1.0.
-random_state = mengatur status random dari model Boosting Algorithm. Pada model ini random state yang digunakan adalah 1.
-boosting.fit(X_train, y_train) = load data yang akan digunakan dalam training model Boosting Algorithm.
-models.loc['train_mse','Boosting'] = mengakses kolom dan baris dari dataframe yang digunakan untuk proses training model Boosting Algorithm.
-mean_absolute_error = metrik yang digunakan untuk mengukur akurasi model yang telah dilatih.
+- Parameter yang digunakan dalam **Lasso Least Angle Regression**, yaitu sebagai berikut:
+    - Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
+    - learning_rate= parameter yang digunakan untuk mengatur proses training dari algoritma ini. Pada model ini, paramater di isi 1.0.
+    - random_state = mengatur status random dari model Boosting Algorithm. Pada model ini random state yang digunakan adalah 1.
+    - boosting.fit(X_train, y_train) = load data yang akan digunakan dalam training model Boosting Algorithm.
+    - models.loc['train_mse','Boosting'] = mengakses kolom dan baris dari dataframe yang digunakan untuk proses training model Boosting Algorithm.
+    - mean_absolute_error = metrik yang digunakan untuk mengukur akurasi model yang telah dilatih.
 
-Parameter yang digunakan dalam **Elastic Net**, yaitu sebagai berikut:
-AdaBoostRegressor = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
-learning_rate= parameter yang digunakan untuk mengatur proses training dari algoritma ini. Pada model ini, paramater di isi 1.0.
-random_state = mengatur status random dari model Boosting Algorithm. Pada model ini random state yang digunakan adalah 1.
-boosting.fit(X_train, y_train) = load data yang akan digunakan dalam training model Boosting Algorithm.
-models.loc['train_mse','Boosting'] = mengakses kolom dan baris dari dataframe yang digunakan untuk proses training model Boosting Algorithm.
-mean_absolute_error = metrik yang digunakan untuk mengukur akurasi model yang telah dilatih.
+- Parameter yang digunakan dalam **Elastic Net**, yaitu sebagai berikut:
+    - AdaBoostRegressor = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
+    - learning_rate= parameter yang digunakan untuk mengatur proses training dari algoritma ini. Pada model ini, paramater di isi 1.0.
+    - random_state = mengatur status random dari model Boosting Algorithm. Pada model ini random state yang digunakan adalah 1.
+    - boosting.fit(X_train, y_train) = load data yang akan digunakan dalam training model Boosting Algorithm.
+    - models.loc['train_mse','Boosting'] = mengakses kolom dan baris dari dataframe yang digunakan untuk proses training model Boosting Algorithm.
+    - mean_absolute_error = metrik yang digunakan untuk mengukur akurasi model yang telah dilatih.
 
 ## *Evaluation*
 Tabel 1: Hasil Evaluasi Model dengan Menggunakan Mean Squared Error
