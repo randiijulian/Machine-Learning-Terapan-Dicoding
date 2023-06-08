@@ -97,20 +97,19 @@ Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelas
 
 ## *Modeling*
 Model machine learning yang digunakan adalah Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
-
-Parameter yang digunakan dalam model Extra Trees Regressor, yaitu sebagai berikut:
-n_estimators = jumlah pohon keputusan (decision tree) yang akan dibuat pada model Extra Trees Regressor yang digunakan. Pada model ini n_estimators yang di buat, yaitu 100.
-random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
-ETree_regressor.fit(X_train, y_train) = menentukan data yang akan digunakan pada proses training model Extra Trees Regressor.
-mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
+- Parameter yang digunakan dalam model Extra Trees Regressor, yaitu sebagai berikut:
+    - n_estimators = jumlah pohon keputusan (decision tree) yang akan dibuat pada model Extra Trees Regressor yang digunakan. Pada model ini n_estimators yang di buat, yaitu 100.
+    - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
+    - ETree_regressor.fit(X_train, y_train) = menentukan data yang akan digunakan pada proses training model Extra Trees Regressor.
+    - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
 Demi mendapatkan hasil yang terbaik, selain menggunakan Extra Trees Regressor, digunakan algoritma lain, yaitu Lasso Regression, Lasso Least Angle Regression dan Elastic Net sebagai algoritma pembanding untuk mengukur manakah algoritma yang lebih baik dalam menghasilkan prediksi harga diamonds.
 
-Parameter yang digunakan dalam Lasso Regression, yaitu sebagai berikut:
-Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Lasso Regression. Function ini berada pada library / modul sklearn.linear_model.
-alpha = Parameter alpha mengontrol kekuatan penalti L1. Semakin besar nilai alpha, semakin besar penalti L1 yang diterapkan, dan semakin banyak koefisien yang akan ditekan menjadi 0. Pada model ini alpha yang dibuat bernilai 0.1.
-random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
-mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
+- Parameter yang digunakan dalam Lasso Regression, yaitu sebagai berikut:
+    - Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Lasso Regression. Function ini berada pada library / modul sklearn.linear_model.
+    - alpha = Parameter alpha mengontrol kekuatan penalti L1. Semakin besar nilai alpha, semakin besar penalti L1 yang diterapkan, dan semakin banyak koefisien yang akan ditekan menjadi 0. Pada model ini alpha yang dibuat bernilai 0.1.
+    - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
+    - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
 Parameter yang digunakan dalam Lasso Least Angle Regression, yaitu sebagai berikut:
 Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
