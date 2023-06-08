@@ -36,13 +36,13 @@ Berdasarkan hasil visualisasi, kategori ideal pada kolom cut memiliki nilai terg
 
 ![image](https://user-images.githubusercontent.com/81604461/244475761-84745941-0b64-44ee-9b2b-25aaad6a385f.png?raw=true)
 
-Gambar 2: visualisasi variabel days_left dengan menggunakan histogram
+Gambar 2: visualisasi variabel color dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, tidak terdapat outliers dalam variabel days_left.
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/66eba612-bf52-48c2-be9d-a517a91084b8?raw=true)
+![image](https://user-images.githubusercontent.com/81604461/244476079-66eba612-bf52-48c2-be9d-a517a91084b8.png?raw=true)
 
-Gambar 3: univariate analysis pada variabel airline
+Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data yang paling banyak dibandingkan dengan masakapai penerbangan lainnya, sedangkan maskapai penerbangan SpiceJet memiliki jumlah data yang paling sedikit dibandingkan dengan maskapai penerbangan lainnya.
 
