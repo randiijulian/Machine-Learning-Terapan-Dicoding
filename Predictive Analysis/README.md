@@ -28,15 +28,15 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 
 ### **Hasil Exploratory Data Analysis**
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/73c27ede-0132-4b89-ba81-0fc51939493a?raw=true)
+![image](https://user-images.githubusercontent.com/81604461/244475132-73c27ede-0132-4b89-ba81-0fc51939493a.png?raw=true)
 
 Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, kategori ideal pada kolom cut memiliki nilai terginggi dibandingkan dengan kategori lainnya.
 
-![image](https://user-images.githubusercontent.com/122204998/215275641-df70eac8-b271-4935-b5ee-b4c28e2f21aa.png)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/84745941-0b64-44ee-9b2b-25aaad6a385f?raw=true)
 
-Gambar 2: visualisasi variabel days_left dengan menggunakan boxplot
+Gambar 2: visualisasi variabel days_left dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, tidak terdapat outliers dalam variabel days_left.
 
