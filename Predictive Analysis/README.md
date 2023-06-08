@@ -25,8 +25,9 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 7. Melakukan *multivariative analysis* untuk memahami korelasi variabel kategorikal dan numberikal terhadap variabel *price*.  
 8. Membuat *correlation matrix* untuk fitur numerik.
 9. Mengeliminasi variabel numerik yang memiliki korelasi rendah terhadap variabel *price*.
-
-### **Hasil Exploratory Data Analysis**
+### *Exploratory Data Analysis*
+#### *Exploratory Data Analysis - Data Cleansing*
+#### *Exploratory Data Analysis - Univariate Analysis*
 
 ![image](https://user-images.githubusercontent.com/81604461/244475132-73c27ede-0132-4b89-ba81-0fc51939493a.png?raw=true)
 
@@ -45,6 +46,8 @@ Berdasarkan hasil visualisasi, tidak terdapat outliers dalam variabel days_left.
 Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data yang paling banyak dibandingkan dengan masakapai penerbangan lainnya, sedangkan maskapai penerbangan SpiceJet memiliki jumlah data yang paling sedikit dibandingkan dengan maskapai penerbangan lainnya.
+
+#### *Exploratory Data Analysis - Multivariate Analysis*
 
 ![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
@@ -92,15 +95,8 @@ Gambar 10: Correlation Matrix
 
 Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelasi variabel table terhadap price = 0.14.
 
-**Proses *Data Preparation***: 
-- Proses data preparation dilakukan melalui langkah-langkah, yaitu sebagai berikut: Melakukan *load* data pada *google colaboratory*, kemudian melakukan analisis awal terkait variabel yang sangat tidak relevan untuk diproses lebih lanjut. Selanjutnya, memahami makna-makna variabel dengan menerapkan *Exploratory Data Analysis*, kemudian melakukan visualisasi data untuk mencari outlier dengan menggunakan *boxplot* dari *library seaborn*. Selanjutnya, menerapkan metode IQR untuk mengeliminasi outlier, kemudian menggunakan *univariate analysis* serta *multivariative analysis*. Selanjutnya membuat *correlation matrix*, kemudian membuang variabel numberik yang memiliki korelasi rendah terhadap variabel *price.*
-- Data preparation diperlukan agar data yang akan diproses oleh algoritma *machine learning* bebas dari *outlier* dan variabel-variabel yang digunakan untuk algoritma adalah variabel yang memiliki korelasi tinggi terhadap penentuan prediksi harga tiket pesawat.
-- Pembuatan aplikasi ini menggunakan IQR *(Interquartile Range)* untuk mengeliminasi *outlier* yang terdapat dalam dataset *flight price prediction*.
-### *Exploratory Data Analysis*
-#### *Exploratory Data Analysis - Data Cleansing*
-#### *Exploratory Data Analysis - Univariate Analysis*
-#### *Exploratory Data Analysis - Multivariate Analysis*
 ### *Splitting Data*
+
 ## *Modeling*
 ## *Evaluation*
 Tabel 1: Hasil Evaluasi Model dengan Menggunakan Mean Squared Error
