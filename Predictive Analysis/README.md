@@ -34,13 +34,13 @@ Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, kategori ideal pada kolom cut memiliki nilai terginggi dibandingkan dengan kategori lainnya.
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/84745941-0b64-44ee-9b2b-25aaad6a385f?raw=true)
+![image](https://user-images.githubusercontent.com/81604461/244475761-84745941-0b64-44ee-9b2b-25aaad6a385f.png?raw=true)
 
 Gambar 2: visualisasi variabel days_left dengan menggunakan histogram
 
 Berdasarkan hasil visualisasi, tidak terdapat outliers dalam variabel days_left.
 
-![image](https://user-images.githubusercontent.com/122204998/215275715-4455ce36-d97b-4919-b969-07ad60d44acc.png)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/66eba612-bf52-48c2-be9d-a517a91084b8?raw=true)
 
 Gambar 3: univariate analysis pada variabel airline
 
