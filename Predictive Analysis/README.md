@@ -79,19 +79,19 @@ Berdasarkan hasil visualisasi, maka dapat dibuat kesimpulan sebagai berikut:
 - semakin cepat waktu penerbangan, maka harga tiket pesawat semakin mahal.
 - variabel days_left tidak begitu berpengaruh pada harga tiket pesawat.
 
-![image](https://user-images.githubusercontent.com/122204998/215325509-8f151876-8200-4db2-b8fc-77759423de7d.png)
+![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
 Gambar 9: multivariate analysis antara variabel airline dengan price
 
 Berdasarkan hasil visualisasi, variabel airline memiliki korelasi yang kuat terhadap price.
 
-![image](https://user-images.githubusercontent.com/122204998/215325764-55e8913b-14f3-49b2-8b07-6646cc08a379.png)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/fd4bcaa1-d573-4dba-94bf-4036c9889214?raw=true)
 
 Gambar 10: multivariate analysis antara variabel source_city dengan price
 
 Berdasarkan hasil visualisasi, variabel source city kurang memiliki korelasi terhadap price.
 
-![image](https://user-images.githubusercontent.com/122204998/215325834-fae3b485-55bf-4e11-b61a-60a3cdd993b0.png)
+![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/ff8ab1f5-ae2b-4af4-8afa-7e446685cbc5?raw=true)
 
 Gambar 11: multivariate analysis antara variabel departure_time dengan price
 
