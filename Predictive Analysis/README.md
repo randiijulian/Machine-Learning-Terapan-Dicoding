@@ -4,11 +4,11 @@
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
 
 ### Variabel-variabel yang terdapat dalam dataset Diamonds:
-- carat = kadar carat pada benda
-- cut = jenis potongan
-- color = warna pada diamonds
-- clarity = tingkat kejernihan pada diamonds
-- depth = 
+- carat 
+- cut
+- color 
+- clarity
+- depth 
 - table
 - price
 - x
@@ -17,9 +17,8 @@ Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi 
 
 ## *Data Preparation*
 Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
-1. Mengubah dataset *flight price prediction* menjadi *dataframe* dengan menggunakan *pandas*.
-2. Analisis awal untuk membuang variabel yang sangat tidak relevan untuk prediksi data.
-3. Melakukan *exploratory data analysis* untuk memahami variabel-variabel yang terdapat dalam dataset.
+1. Mengubah dataset *diamonds* menjadi *dataframe* dengan menggunakan *pandas*.
+2. Melakukan *exploratory data analysis* untuk memahami variabel-variabel yang terdapat dalam dataset.
 4. Memvisualisasikan data dengan menggunakan *boxplot* untuk mencari *outlier*.
 5. Menggunakan IQR *(Interquartile Range)* untuk mengeliminasi outlier.
 6. Melakukan *univariative analysis* untuk memahami sebaran data variabel.
