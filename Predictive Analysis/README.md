@@ -113,7 +113,7 @@ Berdasarkan hasil visualisasi, variabel destination_city kurang memiliki korelas
 
 Berdasarkan hasil visualiasi, variabel class memiliki korelasi yang kuat terhadap price.
 
-![image](https://github.com/randiijulian/Machine-Learning-Terapan-Dicoding/assets/81604461/d5e8d1d0-221b-43e7-a516-f3eef984be8f?raw=true)
+![image](https://user-images.githubusercontent.com/81604461/244478177-d5e8d1d0-221b-43e7-a516-f3eef984be8f.png?raw=true)
 
 Gambar 13: multivariate analysis variabel stops, duration, days_left terhadap price
 
