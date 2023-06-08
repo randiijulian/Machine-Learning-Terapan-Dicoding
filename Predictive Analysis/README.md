@@ -32,7 +32,7 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 
 Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
-Berdasarkan hasil visualisasi, terlihat terdapat outliers dalam variabel duration. Alasannya, karena terdapat data yang terdapat melebihi Quartil 3.
+Berdasarkan hasil visualisasi, kategori ideal pada kolom cut memiliki nilai terginggi dibandingkan dengan kategori lainnya.
 
 ![image](https://user-images.githubusercontent.com/122204998/215275641-df70eac8-b271-4935-b5ee-b4c28e2f21aa.png)
 
