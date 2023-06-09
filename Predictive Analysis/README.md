@@ -2,24 +2,21 @@
 ## *Business Understanding*
 Harga diamonds ideal adalah harga yang sesuai dengan berdasarkan tingkat kualitas dari diamonds tersebut.
 
-Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan bagi costumers dalam memutuskan membeli diamonds.
+Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan dalam penerapan harga diamonds ideal.
 
 Problem Statements
 Berdasarkan penjelasan yang telah disampaikan sebelumnya, maka problem statements (rumusan masalah), yaitu sebagai berikut:
+Apa faktor-faktor yang dapat mempengaruhi harga diamonds?
 
-Apa faktor-faktor yang dapat mempengaruhi harga tiket pesawat?
-Berapa harga ideal tiket pesawat untuk diterapkan di maskapai penerbangan x?
 Goals
-Tujuan yang ingin dicapai dari pembuatan aplikasi prediksi harga tiket pesawat di India ini, yaitu sebagai berikut:
-
-Mengetahui faktor-faktor yang mempengaruhi harga tiket pesawat?
-
-Membuat aplikasi yang dapat memprediksi harga tiket pesawat secara akurat, sebagai bahan pengambilan keputusan dalam penerapan harga tiket ideal untuk diterapkan dimaskapai penerbangan x.
+Tujuan yang ingin dicapai dari pembuatan aplikasi prediksi harga diamonds, yaitu sebagai berikut:
+Mengetahui faktor-faktor yang mempengaruhi harga diamonds?
+Membuat aplikasi yang dapat memprediksi harga diamonds secara akurat, sebagai bahan pengambilan keputusan dalam penerapan harga diamonds ideal.
 
 Solution statements
-Solusi yang dapat dilakukan untuk menangani permasalahan sebagaimana terdapat dalam problem statements, yaitu dengan membuat aplikasi prediksi harga tiket pesawat. Adapun aplikasi tersebut dibuat dengan menerapkan teknologi machine learning serta bahasa pemrograman python.
-Algoritma machine learning yang akan digunakan, yaitu Random Forest dan Boosting Algorithm.
-Untuk mengukur keakuratan/keidealan prediksi harga tiket pesawat yang dilakukan oleh aplikasi yang dibuat, maka metrik yang digunakan adalah Mean Squared Error (MSE).
+Solusi yang dapat dilakukan untuk menangani permasalahan sebagaimana terdapat dalam problem statements, yaitu dengan membuat aplikasi prediksi harga diamonds. Adapun aplikasi tersebut dibuat dengan menerapkan teknologi machine learning serta bahasa pemrograman python.
+Algoritma machine learning yang akan digunakan, yaitu Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
+Untuk mengukur keakuratan/keidealan prediksi harga diamonds yang dilakukan oleh aplikasi yang dibuat, maka metrik yang digunakan adalah Mean Squared Error (MSE).
 
 ## *Data Understanding*
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
