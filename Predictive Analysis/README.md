@@ -188,7 +188,7 @@ Model | y_true | prediksi_Extra Trees Regressor | prediksi_Lasso Regression | pr
 45947 |  1723  | 1814.0                         | 2063.6                    | 2063.6                                | 1993.6               |
 
 Gambar 8: Prediction Table
-
+Berdasarkan tabel diatas, kita dapat membandingkan prediksi dari beberapa model regresi dan melihat seberapa baik mereka memprediksi nilai target untuk 10 data uji pertama.
 
 **Cara Kerja Metrik Mean Squared Error**: 
 - *Mean Squared Error* adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat. MSE menghitung rata-rata dari kuadrat perbedaan antara setiap pasangan nilai prediksi dan nilai sebenarnya.
