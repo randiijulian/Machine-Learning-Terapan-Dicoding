@@ -1,21 +1,20 @@
 # *Predictive Analysis Submission*
 ## *Business Understanding*
-Domain Proyek
-Latar Belakang
+### **Latar Belakang**
 Harga diamonds yang terlalu mahal akan membuat seseorang berpikir berkali-kali untuk memutuskan untuk membeli diamonds. Sebaliknya, harga diamonds yang terlalu murah, akan menyebabkan perusahaan tidak dapat memaksimalkan keuntungan bagi perusahaan, hal ini akan menyebabkan kerugian bagi perusahaan.
 
 Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan dalam penerapan harga diamonds ideal, sehingga harga tiket akan seimbang (tidak terlalu mahal, juga tidak terlalu murah). Harga diamonds ideal adalah harga yang sesuai dengan berdasarkan tingkat kualitas dari diamonds tersebut.
 
-Problem Statements
+### **Problem Statements**
 Berdasarkan penjelasan yang telah disampaikan sebelumnya, maka problem statements (rumusan masalah), yaitu sebagai berikut:
 Apa faktor-faktor yang dapat mempengaruhi harga diamonds?
 
-Goals
+### **Goals**
 Tujuan yang ingin dicapai dari pembuatan aplikasi prediksi harga diamonds, yaitu sebagai berikut:
 Mengetahui faktor-faktor yang mempengaruhi harga diamonds?
 Membuat aplikasi yang dapat memprediksi harga diamonds secara akurat, sebagai bahan pengambilan keputusan dalam penerapan harga diamonds ideal.
 
-Solution statements
+### **Solution statements**
 Solusi yang dapat dilakukan untuk menangani permasalahan sebagaimana terdapat dalam problem statements, yaitu dengan membuat aplikasi prediksi harga diamonds. Adapun aplikasi tersebut dibuat dengan menerapkan teknologi machine learning serta bahasa pemrograman python.
 Algoritma machine learning yang akan digunakan, yaitu Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
 Untuk mengukur keakuratan/keidealan prediksi harga diamonds yang dilakukan oleh aplikasi yang dibuat, maka metrik yang digunakan adalah Mean Squared Error (MSE).
@@ -24,16 +23,16 @@ Untuk mengukur keakuratan/keidealan prediksi harga diamonds yang dilakukan oleh 
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
 
 ### Variabel-variabel yang terdapat dalam dataset Diamonds:
-- carat 
-- cut
-- color 
-- clarity
-- depth 
-- table
-- price
-- x
-- y
-- z
+- carat = variabel ini bertipe data float
+- cut = variabel ini bertipe data object
+- color = variabel ini bertipe data object
+- clarity = variabel ini bertipe data object
+- depth = variabel ini bertipe data float
+- table = variabel ini bertipe data float
+- price = variabel ini bertipe data integer
+- x = variabel ini bertipe data float
+- y = variabel ini bertipe data float
+- z = variabel ini bertipe data float
 
 ## *Data Preparation*
 Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
@@ -127,6 +126,7 @@ Elastic Net                  | 837.14892    | 831.40399    |
 - Berdasarkan hasil training, bahwa model *Extra Trees Regressor* menghasilan nilai MSE pada saat *training* = 0.054081 dan pada saat tes = 149.967816. 
 - Berdasarkan hasil training model, maka ditetapkan bahwa algoritma yang terbaik diantara *Extra Trees Regressor* sedangkan *Lasso Regression* dan *Lasso Least Angle Regression* memiliki performa yang tidak terpaut jauh dalam memprediksi harga diamonds, yaitu algoritma *Extra Trees Regressor*.
 - Alasannya, karena nilai *Mean Squared Error (MSE)* yang dihasilkan *Extra Trees Regressor* lebih baik dari algoritma lain yang digunakan.
+Gambar 8: 
 
 **Cara Kerja Metrik Mean Squared Error**: 
 - *Mean Squared Error* adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat. MSE menghitung rata-rata dari kuadrat perbedaan antara setiap pasangan nilai prediksi dan nilai sebenarnya.
