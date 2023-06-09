@@ -174,18 +174,18 @@ Elastic Net                  | 837.14892    | 831.40399    |
 - Berdasarkan hasil training model, maka ditetapkan bahwa algoritma yang terbaik diantara *Extra Trees Regressor* sedangkan *Lasso Regression* dan *Lasso Least Angle Regression* memiliki performa yang tidak terpaut jauh dalam memprediksi harga diamonds, yaitu algoritma *Extra Trees Regressor*.
 - karena nilai *Mean Squared Error (MSE)* yang dihasilkan *Extra Trees Regressor* lebih baik dari algoritma lain yang digunakan.
 
-Model | y_true | prediksi_Extra Trees Regressor | prediksi_Lasso Regression | prediksi_Lasso Least Angle Regression | prediksi_Elastic Net |
------ | ------ | ------------------------------ | ------------------------- | ------------------------------------- | -------------------- |
-51619 |  2396  | 2468.4                         | 2842.2                    | 2842.2                                | 3277.8               |
-23536 |  11540 | 11435.0                        | 9589.9                    | 9590.0                                | 8452.0               |
-10413 |  4779  | 5763.0                         | 5577.1                    | 5577.1                                | 5551.6               |
-3157  |  3334  | 3542.4                         | 3852.8                    | 3852.7                                | 3999.0               |
-1566  |  3005  | 2622.4                         | 2754.5                    | 2754.4                                | 3399.7               |
-52429 |  2513  | 2536.0                         | 2896.5                    | 2896.5                                | 3189.5               |
-41000 |  1183  | 1273.1                         | 1608.3                    | 1608.3                                | 1326.2               |
-11795 |  5088  | 5159.4                         | 5992.1                    | 5992.1                                | 5813.8               |
-32397 |  791   | 864.0                          | 1298.6                    | 1298.6                                | 912.5                |
-45947 |  1723  | 1814.0                         | 2063.6                    | 2063.6                                | 1993.6               |
+|       | y_true | prediksi_Extra Trees Regressor | prediksi_Lasso Regression | prediksi_Lasso Least Angle Regression | prediksi_Elastic Net |
+|:-----:|:------:|:------------------------------:|:-------------------------:|:-------------------------------------:|:--------------------:|
+| 51619 |  2396  |             2468.4             |           2842.2          |                 2842.2                |        3277.8        |
+| 23536 |  11540 |             11435.0            |           9589.9          |                 9590.0                |        8452.0        |
+| 10413 |  4779  |             5763.0             |           5577.1          |                 5577.1                |        5551.6        |
+|  3157 |  3334  |             3542.4             |           3852.8          |                 3852.7                |        3999.0        |
+|  1566 |  3005  |             2622.4             |           2754.5          |                 2754.4                |        3399.7        |
+| 52429 |  2513  |             2536.0             |           2896.5          |                 2896.5                |        3189.5        |
+| 41000 |  1183  |             1273.1             |           1608.3          |                 1608.3                |        1326.2        |
+| 11795 |  5088  |             5159.4             |           5992.1          |                 5992.1                |        5813.8        |
+| 32397 |   791  |              864.0             |           1298.6          |                 1298.6                |         912.5        |
+| 45947 |  1723  |             1814.0             |           2063.6          |                 2063.6                |        1993.6        |
 
 Gambar 8: Prediction Table
 Berdasarkan tabel diatas, kita dapat membandingkan prediksi dari beberapa model regresi dan melihat seberapa baik mereka memprediksi nilai target untuk 10 data uji pertama.
