@@ -106,9 +106,9 @@ Berdasarkan hasil visualiasi, variabel class memiliki korelasi yang kuat terhada
 
 ![image](https://user-images.githubusercontent.com/81604461/244478177-d5e8d1d0-221b-43e7-a516-f3eef984be8f.png?raw=true)
 
-Gambar 9: multivariate analysis variabel carat, depth, table terhadap price.
+Gambar 9: multivariate analysis variabel carat, depth dan table terhadap price.
 
-Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel stops, duration dan days_left kurang memiliki korelasi dengan price.
+Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel depth dan table kurang memiliki korelasi dengan price.
 
 ![correlation matrix](https://user-images.githubusercontent.com/81604461/244479558-98e283e1-2e41-45da-a742-ac47e8d81da1.png?raw=true)
 
