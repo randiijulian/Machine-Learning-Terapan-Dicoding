@@ -72,19 +72,13 @@ Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
 
 Gambar 4: multivariate analysis antara variabel cut dengan price
 
-Berdasarkan hasil visualisasi, variabel airline memiliki korelasi yang kuat terhadap price.
-
 ![image](https://user-images.githubusercontent.com/81604461/244477024-fd4bcaa1-d573-4dba-94bf-4036c9889214.png?raw=true)
 
 Gambar 5: multivariate analysis antara variabel color dengan price
 
-Berdasarkan hasil visualisasi, variabel source city kurang memiliki korelasi terhadap price.
-
 ![image](https://user-images.githubusercontent.com/81604461/244477030-ff8ab1f5-ae2b-4af4-8afa-7e446685cbc5.png?raw=true)
 
 Gambar 6: multivariate analysis antara variabel clarity dengan price
-
-Berdasarkan hasil visualisasi, variabel departure_time cukup memiliki korelasi terhadap price.
 
 ![correlation matrix](https://user-images.githubusercontent.com/81604461/244479558-98e283e1-2e41-45da-a742-ac47e8d81da1.png?raw=true)
 
