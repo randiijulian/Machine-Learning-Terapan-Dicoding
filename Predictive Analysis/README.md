@@ -2,9 +2,7 @@
 ## *Business Understanding*
 Harga diamonds ideal adalah harga yang sesuai dengan berdasarkan tingkat kualitas dari diamonds tersebut.
 
-Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal tiket pesawat di India, untuk menjadi bahan pengambilan keputusan bagi pimpinan dalam menentukan harga layanan.
-
-Dengan menerapkan harga tiket yang ideal, maka pengguna layanan akan merasa senang dan berpotensi untuk menambah pelanggan yang ingin menggunakan layanan penerbangan melalui maskapai penerbangan x.
+Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan bagi costumers dalam memutuskan membeli diamonds.
 
 Problem Statements
 Berdasarkan penjelasan yang telah disampaikan sebelumnya, maka problem statements (rumusan masalah), yaitu sebagai berikut:
