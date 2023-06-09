@@ -129,12 +129,30 @@ Namun, ada beberapa catatan yang perlu diperhatikan saat menggunakan Lasso Regre
     - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
     - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
+**Lasso Least Angle Regression (LARS)** adalah sebuah algoritma yang digunakan dalam machine learning untuk pemodelan regresi dengan regularisasi Lasso. LARS dikembangkan dengan tujuan untuk mengatasi keterbatasan komputasi dari algoritma Lasso standar ketika jumlah fitur sangat besar atau bahkan lebih besar daripada jumlah sampel yang tersedia.
 
+Berikut adalah beberapa poin penting tentang Lasso Least Angle Regression:
+1. Stepwise Forward Selection: LARS menggunakan pendekatan "stepwise forward selection" untuk membangun model regresi. Pada setiap langkahnya, LARS memilih fitur yang memiliki korelasi paling kuat dengan variabel target dan sejajar dengan arah solusi optimal. Dalam langkah-langkah berikutnya, LARS bergerak sepanjang jalur solusi dengan mengontrol besarnya koefisien yang ditambahkan ke model.
+2. Pathwise Algorithm: LARS menghitung solusi Lasso untuk semua nilai alpha secara simultan, menghasilkan jalur solusi lengkap dari model regresi. Algoritma ini menghindari proses pelatihan yang memakan waktu secara berulang dengan memanfaatkan sifat linier dalam solusi Lasso.
+3. Koefisien Berkembang: LARS memperkenalkan konsep "koefisien berkembang" (evolving coefficients) untuk mengontrol bagaimana setiap fitur berkontribusi pada model saat fitur-fitur baru diperkenalkan. Koefisien berkembang memungkinkan interpretasi yang lebih baik dan memberikan wawasan tentang pentingnya setiap fitur dalam model.
+4. Regularisasi L1: LARS menggunakan regularisasi L1 (Lasso) dalam fungsi objektif yang dioptimalkan. Regularisasi L1 membantu menghasilkan model yang sparse, yaitu dengan sebagian besar koefisien yang nol. Ini memungkinkan LARS untuk melakukan seleksi fitur secara otomatis dan menghasilkan model yang lebih sederhana dan terinterpretasi.
+
+Keuntungan dari Lasso Least Angle Regression termasuk kemampuan untuk mengatasi masalah komputasi yang terkait dengan dataset berfitur besar, kemampuan untuk membangun jalur solusi lengkap, dan interpretasi yang baik dari koefisien berkembang.
 
 - Parameter yang digunakan dalam **Lasso Least Angle Regression**, yaitu sebagai berikut:
     - LassoLars = function yang digunakan untuk melakukan proses training model dengan menggunakan Lasso Least Angle Regression. Function ini berada pada library / modul sklearn.linear_model.
     - alpha = Parameter alpha mengontrol kekuatan penalti L1. Semakin besar nilai alpha, semakin besar penalti L1 yang diterapkan, dan semakin banyak koefisien yang akan ditekan menjadi 0. Pada model ini alpha yang dibuat bernilai 0.1.
      - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
+
+**Elastic Net** adalah sebuah algoritma yang digunakan dalam machine learning untuk pemodelan regresi dengan regularisasi. Algoritma ini dikembangkan dengan tujuan untuk mengatasi beberapa keterbatasan yang dimiliki oleh algoritma Lasso dan Ridge Regression.
+
+Berikut adalah beberapa poin penting tentang algoritma Elastic Net:
+1. Kombinasi L1 dan L2 Regularisasi: Elastic Net mengkombinasikan regularisasi L1 (Lasso) dan regularisasi L2 (Ridge) dalam fungsi objektif yang dioptimalkan. Regularisasi L1 mendorong beberapa koefisien menjadi nol, sehingga melakukan seleksi fitur, sementara regularisasi L2 mencegah koefisien menjadi terlalu besar. Dengan memadukan keduanya, Elastic Net dapat mengatasi kelemahan Lasso yang cenderung memilih satu fitur dalam kasus korelasi tinggi antara fitur dan kelemahan Ridge Regression yang tidak dapat melakukan seleksi fitur.
+2. Penalti Hiperparameter: Elastic Net memiliki dua hiperparameter utama, yaitu alpha dan l1_ratio. Alpha mengendalikan kekuatan regularisasi secara keseluruhan, dengan nilai yang lebih tinggi menghasilkan model yang lebih teregularisasi. L1_ratio mengontrol proporsi regularisasi L1 dan L2, dengan nilai 1 menghasilkan regularisasi L1 penuh dan nilai 0 menghasilkan regularisasi L2 penuh. Pemilihan hiperparameter yang tepat melalui validasi silang dapat membantu menghasilkan model yang optimal.
+3. Penanganan Multikolinearitas: Elastic Net dapat mengatasi masalah multikolinearitas, yaitu adanya korelasi tinggi antara fitur-fitur. Dalam kasus multikolinearitas, Elastic Net cenderung memilih kelompok fitur yang saling terkait secara konsisten daripada memilih satu fitur secara acak seperti yang dilakukan oleh Lasso. Dengan demikian, Elastic Net menghasilkan model yang lebih stabil dan konsisten dalam kasus multikolinearitas.
+4. Trade-off antara Sparsity dan Stabilitas: Elastic Net menawarkan trade-off antara sparsity (kehadiran fitur yang lebih sedikit) dan stabilitas dalam model. Dengan menggunakan kombinasi regularisasi L1 dan L2, Elastic Net dapat menghasilkan model yang lebih teregularisasi daripada Lasso, sehingga dapat mempertahankan fitur-fitur yang saling berkorelasi secara signifikan.
+
+Keuntungan dari Elastic Net meliputi kemampuannya untuk mengatasi masalah multikolinearitas, melakukan seleksi fitur secara otomatis, dan menghasilkan model yang lebih stabil.
 
 - Parameter yang digunakan dalam **Elastic Net**, yaitu sebagai berikut:
     - ElasticNet = function yang digunakan untuk melakukan proses training model dengan menggunakan Elastic Net. Function ini berada pada library / modul sklearn.linear_model.
