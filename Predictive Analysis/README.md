@@ -87,8 +87,20 @@ Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelas
 ## *Modeling*
 Model machine learning yang digunakan adalah Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
 
+**Extra Trees Regressor** adalah algoritma yang digunakan untuk masalah regresi dalam machine learning. Algoritma ini merupakan variasi dari algoritma Decision Tree yang menggunakan teknik ensemble learning. Ensemble learning menggabungkan beberapa model pembelajaran untuk meningkatkan kinerja dan kestabilan prediksi.
+
+Berikut adalah langkah-langkah utama dalam algoritma Extra Trees Regressor:
+1. Random Subspace: Pada setiap langkah pembentukan pohon keputusan, subset acak fitur dari dataset dilakukan. Ini berarti setiap pohon hanya menggunakan sebagian kecil fitur yang tersedia. Tujuannya adalah untuk mencegah pohon menjadi sangat serupa satu sama lain dan meningkatkan variasi dalam ensemble.
+2. Random Split Points: Ketika membangun setiap node dalam pohon, beberapa titik pemisahan (split points) yang acak dipertimbangkan untuk setiap fitur. Ini memungkinkan algoritma untuk menemukan titik pemisahan yang optimal secara acak, yang dapat mengurangi overfitting dan meningkatkan kestabilan prediksi.
+3. Voting: Ketika melakukan prediksi, setiap pohon memberikan prediksi berdasarkan struktur pohon dan fitur yang dipertimbangkan pada saat itu. Prediksi dari setiap pohon kemudian diakumulasikan menggunakan teknik voting, seperti rata-rata atau mayoritas, untuk menghasilkan prediksi akhir.
+
+Keuntungan dari Extra Trees Regressor adalah sebagai berikut:
+* Mengurangi overfitting: Dengan menggunakan teknik random subspace dan random split points, Extra Trees Regressor mengurangi risiko overfitting pada data pelatihan dan meningkatkan generalisasi pada data uji.
+* Stabilitas: Karena keputusan dalam membangun pohon dilakukan secara acak, model ini lebih tahan terhadap variasi dalam data pelatihan dan dapat memberikan hasil yang lebih stabil.
+* Komputasi paralel: Karena setiap pohon independen, algoritma ini dapat dengan mudah diimplementasikan dalam komputasi paralel untuk meningkatkan efisiensi pemrosesan.
+
 - Parameter yang digunakan dalam model **Extra Trees Regressor**, yaitu sebagai berikut:
-    - - ExtraTreesRegressor = function yang digunakan untuk melakukan proses training model dengan menggunakan Extra Trees Regressor. Function ini berada pada library / modul sklearn.ensemble.
+    - ExtraTreesRegressor = function yang digunakan untuk melakukan proses training model dengan menggunakan Extra Trees Regressor. Function ini berada pada library / modul sklearn.ensemble.
     - n_estimators = jumlah pohon keputusan (decision tree) yang akan dibuat pada model Extra Trees Regressor yang digunakan. Pada model ini n_estimators yang di buat, yaitu 100.
     - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
     - ETree_regressor.fit(X_train, y_train) = menentukan data yang akan digunakan pada proses training model Extra Trees Regressor.
@@ -96,11 +108,28 @@ Model machine learning yang digunakan adalah Extra Trees Regressor, Lasso Regres
 
 Demi mendapatkan hasil yang terbaik, selain menggunakan Extra Trees Regressor, digunakan algoritma lain, yaitu Lasso Regression, Lasso Least Angle Regression dan Elastic Net sebagai algoritma pembanding untuk mengukur manakah algoritma yang lebih baik dalam menghasilkan prediksi harga diamonds.
 
+**Lasso Regression (Least Absolute Shrinkage and Selection Operator Regression)** adalah sebuah algoritma dalam machine learning yang digunakan untuk pemodelan regresi dengan regularisasi. Tujuan utama Lasso Regression adalah untuk melakukan seleksi fitur dan mengurangi overfitting dalam model regresi.
+
+Berikut adalah beberapa poin penting tentang Lasso Regression:
+1. Regularisasi L1: Lasso Regression menggunakan regularisasi L1 yang ditambahkan ke fungsi objektif yang akan dioptimalkan. Regularisasi L1 merupakan penjumlahan nilai absolut dari koefisien yang digunakan dalam model regresi. Dengan menggunakan regularisasi L1, Lasso Regression mendorong beberapa koefisien menjadi nol, sehingga secara efektif melakukan seleksi fitur dan mempersempit model.
+2. Variabel Seleksi: Salah satu keunggulan utama Lasso Regression adalah kemampuannya untuk melakukan seleksi fitur secara otomatis. Dengan menempatkan penalti yang cukup tinggi pada fitur yang kurang penting, Lasso Regression akan mengatur koefisien fitur yang tidak relevan menjadi nol. Ini membantu dalam menghilangkan fitur yang tidak memberikan kontribusi signifikan terhadap prediksi dan menghasilkan model yang lebih sederhana dan terinterpretasi dengan baik.
+3. Sparsity: Lasso Regression sering menghasilkan solusi sparse, yaitu solusi di mana sebagian besar koefisien adalah nol. Hal ini terjadi karena regularisasi L1 cenderung "mendorong" beberapa koefisien menjadi nol, menghasilkan model yang hanya menggunakan subset fitur yang penting untuk prediksi.
+4. Tuning Parameter: Lasso Regression memiliki parameter alpha yang mengendalikan kekuatan regularisasi. Semakin besar nilai alpha, semakin tinggi tingkat penalti yang diterapkan pada koefisien, sehingga lebih banyak koefisien yang cenderung menjadi nol. Nilai alpha yang optimal dapat ditentukan melalui validasi silang atau teknik tuning parameter lainnya.
+
+Keuntungan Lasso Regression meliputi kemampuannya untuk melakukan seleksi fitur secara otomatis, menghasilkan model yang lebih sederhana dan terinterpretasi, serta mengurangi risiko overfitting pada data pelatihan.
+
+Namun, ada beberapa catatan yang perlu diperhatikan saat menggunakan Lasso Regression:
+* Jika ada korelasi tinggi antara fitur-fitur, Lasso Regression cenderung memilih satu fitur dan mengabaikan yang lain.
+* Pada dataset dengan jumlah fitur yang sangat besar, komputasi Lasso Regression bisa menjadi lebih lambat.
+* Jika ada fitur yang saling dependen secara kuat, Lasso Regression bisa mengalami masalah dalam memilih fitur yang tepat.
+
 - Parameter yang digunakan dalam **Lasso Regression**, yaitu sebagai berikut:
     - Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Lasso Regression. Function ini berada pada library / modul sklearn.linear_model.
     - alpha = Parameter alpha mengontrol kekuatan penalti L1. Semakin besar nilai alpha, semakin besar penalti L1 yang diterapkan, dan semakin banyak koefisien yang akan ditekan menjadi 0. Pada model ini alpha yang dibuat bernilai 0.1.
     - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
     - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
+
+
 
 - Parameter yang digunakan dalam **Lasso Least Angle Regression**, yaitu sebagai berikut:
     - LassoLars = function yang digunakan untuk melakukan proses training model dengan menggunakan Lasso Least Angle Regression. Function ini berada pada library / modul sklearn.linear_model.
