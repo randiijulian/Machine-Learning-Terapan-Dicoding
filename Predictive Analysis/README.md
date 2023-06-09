@@ -163,10 +163,10 @@ Keuntungan dari Elastic Net meliputi kemampuannya untuk mengatasi masalah multik
 
 ## *Evaluation*
 Tabel 1: Hasil Evaluasi Model dengan Menggunakan Mean Squared Error
-Model                        | train        | test	        |
+Model                        | train        | test	       |
 ---------------------------- | -----------  | ------------ |
-Extra Trees Regressor        | 0.054081 	   | 149.967816   |
-Lasso Regression             | 558.32874	   | 555.515268   |
+Extra Trees Regressor        | 0.054081 	| 149.967816   |
+Lasso Regression             | 558.32874	| 555.515268   |
 Lasso Least Angle Regression | 558.328177   | 555.515686   |
 Elastic Net                  | 837.14892    | 831.40399    |
 - Metrik yang digunakan untuk mengukur hasil *training* adalah *mean squared error (MSE)*. 
@@ -174,7 +174,18 @@ Elastic Net                  | 837.14892    | 831.40399    |
 - Berdasarkan hasil training model, maka ditetapkan bahwa algoritma yang terbaik diantara *Extra Trees Regressor* sedangkan *Lasso Regression* dan *Lasso Least Angle Regression* memiliki performa yang tidak terpaut jauh dalam memprediksi harga diamonds, yaitu algoritma *Extra Trees Regressor*.
 - Alasannya, karena nilai *Mean Squared Error (MSE)* yang dihasilkan *Extra Trees Regressor* lebih baik dari algoritma lain yang digunakan.
 
-![Prediction Table](https://user-images.githubusercontent.com/81604461/244658568-a0faa407-b966-4781-a72d-df5ae169bb3f.jpeg?raw=true)
+Model | y_true | prediksi_Extra Trees Regressor | prediksi_Lasso Regression | prediksi_Lasso Least Angle Regression | prediksi_Elastic Net |
+----- | ------ | ------------------------------ | ------------------------- | ------------------------------------- | -------------------- |
+51619 |  2396  | 2468.4                         | 2842.2                    | 2842.2                                | 3277.8               |
+23536 |  11540 | 11435.0                        | 9589.9                    | 9590.0                                | 8452.0               |
+10413 |  4779  | 5763.0                         | 5577.1                    | 5577.1                                | 5551.6               |
+3157  |  3334  | 3542.4                         | 3852.8                    | 3852.7                                | 3999.0               |
+1566  |  3005  | 2622.4                         | 2754.5                    | 2754.4                                | 3399.7               |
+52429 |  2513  | 2536.0                         | 2896.5                    | 2896.5                                | 3189.5               |
+51619 |  2396  | 2468.4                         | 2842.2                    | 2842.2                                | 3277.8               |
+51619 |  2396  | 2468.4                         | 2842.2                    | 2842.2                                | 3277.8               |
+51619 |  2396  | 2468.4                         | 2842.2                    | 2842.2                                | 3277.8               |
+51619 |  2396  | 2468.4                         | 2842.2                    | 2842.2                                | 3277.8               |
 Gambar 8: Prediction Table
 
 
