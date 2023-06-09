@@ -1,8 +1,10 @@
 # *Predictive Analysis Submission*
 ## *Business Understanding*
-Harga diamonds ideal adalah harga yang sesuai dengan berdasarkan tingkat kualitas dari diamonds tersebut.
+Domain Proyek
+Latar Belakang
+Harga diamonds yang terlalu mahal akan membuat seseorang berpikir berkali-kali untuk memutuskan untuk membeli diamonds. Sebaliknya, harga diamonds yang terlalu murah, akan menyebabkan perusahaan tidak dapat memaksimalkan keuntungan bagi perusahaan, hal ini akan menyebabkan kerugian bagi perusahaan.
 
-Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan dalam penerapan harga diamonds ideal.
+Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan dalam penerapan harga diamonds ideal, sehingga harga tiket akan seimbang (tidak terlalu mahal, juga tidak terlalu murah). Harga diamonds ideal adalah harga yang sesuai dengan berdasarkan tingkat kualitas dari diamonds tersebut.
 
 Problem Statements
 Berdasarkan penjelasan yang telah disampaikan sebelumnya, maka problem statements (rumusan masalah), yaitu sebagai berikut:
