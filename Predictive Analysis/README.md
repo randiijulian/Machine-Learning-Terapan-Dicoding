@@ -120,6 +120,7 @@ Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelas
 Model machine learning yang digunakan adalah Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
 
 - Parameter yang digunakan dalam model **Extra Trees Regressor**, yaitu sebagai berikut:
+    - - ExtraTreesRegressor = function yang digunakan untuk melakukan proses training model dengan menggunakan Extra Trees Regressor. Function ini berada pada library / modul sklearn.ensemble.
     - n_estimators = jumlah pohon keputusan (decision tree) yang akan dibuat pada model Extra Trees Regressor yang digunakan. Pada model ini n_estimators yang di buat, yaitu 100.
     - random_state = mengatur status random dari model Extra Trees Regressor. Pada model ini random state yang digunakan adalah 42.
     - ETree_regressor.fit(X_train, y_train) = menentukan data yang akan digunakan pada proses training model Extra Trees Regressor.
@@ -134,20 +135,16 @@ Demi mendapatkan hasil yang terbaik, selain menggunakan Extra Trees Regressor, d
     - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
 - Parameter yang digunakan dalam **Lasso Least Angle Regression**, yaitu sebagai berikut:
-    - Lasso = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
-    - learning_rate= parameter yang digunakan untuk mengatur proses training dari algoritma ini. Pada model ini, paramater di isi 1.0.
-    - random_state = mengatur status random dari model Boosting Algorithm. Pada model ini random state yang digunakan adalah 1.
-    - boosting.fit(X_train, y_train) = load data yang akan digunakan dalam training model Boosting Algorithm.
-    - models.loc['train_mse','Boosting'] = mengakses kolom dan baris dari dataframe yang digunakan untuk proses training model Boosting Algorithm.
-    - mean_absolute_error = metrik yang digunakan untuk mengukur akurasi model yang telah dilatih.
+    - LassoLars = function yang digunakan untuk melakukan proses training model dengan menggunakan Lasso Least Angle Regression. Function ini berada pada library / modul sklearn.linear_model.
+    - alpha = Parameter alpha mengontrol kekuatan penalti L1. Semakin besar nilai alpha, semakin besar penalti L1 yang diterapkan, dan semakin banyak koefisien yang akan ditekan menjadi 0. Pada model ini alpha yang dibuat bernilai 0.1.
+     - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
 - Parameter yang digunakan dalam **Elastic Net**, yaitu sebagai berikut:
-    - AdaBoostRegressor = function yang digunakan untuk melakukan proses training model dengan menggunakan Boosting Algorithm. Function ini berada pada library / modul sklearn.ensemble.
-    - learning_rate= parameter yang digunakan untuk mengatur proses training dari algoritma ini. Pada model ini, paramater di isi 1.0.
-    - random_state = mengatur status random dari model Boosting Algorithm. Pada model ini random state yang digunakan adalah 1.
-    - boosting.fit(X_train, y_train) = load data yang akan digunakan dalam training model Boosting Algorithm.
-    - models.loc['train_mse','Boosting'] = mengakses kolom dan baris dari dataframe yang digunakan untuk proses training model Boosting Algorithm.
-    - mean_absolute_error = metrik yang digunakan untuk mengukur akurasi model yang telah dilatih.
+    - ElasticNet = function yang digunakan untuk melakukan proses training model dengan menggunakan Elastic Net. Function ini berada pada library / modul sklearn.linear_model.
+    - alpha = Parameter Alpha adalah parameter penalti yang mengontrol kekuatan regularisasi. Pada model ini alpha yang dibuat bernilai 0.1.
+    - l1_ratio = rasio L1 terhadap total regularisasi. Pada model ini rasio L1 yang dibuat bernilai 0.5.
+    - random_state = random_state adalah parameter yang digunakan untuk memastikan reproduktibilitas hasil. Pada model ini random state yang digunakan adalah 42.
+    - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
 ## *Evaluation*
 Tabel 1: Hasil Evaluasi Model dengan Menggunakan Mean Squared Error
