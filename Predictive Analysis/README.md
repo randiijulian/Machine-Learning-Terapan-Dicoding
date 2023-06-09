@@ -106,7 +106,7 @@ Berdasarkan hasil visualiasi, variabel class memiliki korelasi yang kuat terhada
 
 ![image](https://user-images.githubusercontent.com/81604461/244478177-d5e8d1d0-221b-43e7-a516-f3eef984be8f.png?raw=true)
 
-Gambar 9: multivariate analysis variabel stops, duration, days_left terhadap price
+Gambar 9: multivariate analysis variabel carat, depth, table terhadap price.
 
 Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel stops, duration dan days_left kurang memiliki korelasi dengan price.
 
