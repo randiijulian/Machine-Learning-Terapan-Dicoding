@@ -23,16 +23,16 @@ Untuk mengukur keakuratan/keidealan prediksi harga diamonds yang dilakukan oleh 
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
 
 ### Variabel-variabel yang terdapat dalam dataset Diamonds:
-- carat = merupakan tingkat kadar karat pada diamonds
-- cut = merupakan jenis potongan pada diamonds
-- color = merupakan warna pada diamonds
-- clarity = merupakan tingkat kejernihan pada diamonds
-- depth = variabel ini bertipe data float
-- table = variabel ini bertipe data float
-- price = merupakan harga diamonds
-- x = variabel ini bertipe data float
-- y = variabel ini bertipe data float
-- z = variabel ini bertipe data float
+- carat = Merupakan ukuran berat batu permata dalam karat. Karat adalah satuan pengukuran yang digunakan untuk mengukur berat batu permata, di mana 1 karat setara dengan 0,2 gram.
+- cut = Merupakan kategori yang menggambarkan kualitas pemotongan batu permata. Terdapat lima tingkatan kategori untuk cut yaitu Fair, Good, Very Good, Premium, dan Ideal. Kategori Ideal dianggap sebagai kualitas pemotongan yang paling baik, sementara Fair dianggap sebagai kualitas pemotongan yang paling rendah.
+- color = Merupakan kategori yang menggambarkan warna batu permata. Terdapat tujuh tingkatan kategori untuk color, yaitu dari J (kuning) hingga D (warna terbaik, berlian tanpa warna).
+- clarity = Merupakan kategori yang menggambarkan kejernihan atau kemurnian batu permata. Terdapat 11 tingkatan kategori untuk clarity, mulai dari I1 (sangat terdapat inklusi) hingga IF (tanpa inklusi yang terlihat).
+- depth = Merupakan persentase kedalaman total batu permata dibandingkan dengan diameter terbesar. Persentase ini memberikan gambaran tentang sejauh mana batu permata mencapai kedalaman tertentu.
+- table = Merupakan persentase lebar permukaan atas batu permata dibandingkan dengan diameter terbesar. Persentase ini memberikan gambaran tentang lebar permukaan batu permata.
+- price = Merupakan harga batu permata dalam dolar Amerika Serikat. Harga batu permata dipengaruhi oleh berbagai faktor seperti karat, kualitas potongan, warna, kejernihan, dan lainnya.
+- x = Merupakan panjang batu permata dalam mm.
+- y = Merupakan lebar batu permata dalam mm.
+- z = Merupakan kedalaman batu permata dalam mm.
 
 ## *Data Preparation*
 Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
