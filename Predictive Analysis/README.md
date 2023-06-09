@@ -23,13 +23,13 @@ Untuk mengukur keakuratan/keidealan prediksi harga diamonds yang dilakukan oleh 
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
 
 ### Variabel-variabel yang terdapat dalam dataset Diamonds:
-- carat = variabel ini bertipe data float
-- cut = variabel ini bertipe data object
-- color = variabel ini bertipe data object
-- clarity = variabel ini bertipe data object
+- carat = merupakan tingkat kadar karat pada diamonds
+- cut = merupakan jenis potongan pada diamonds
+- color = merupakan warna pada diamonds
+- clarity = merupakan tingkat kejernihan pada diamonds
 - depth = variabel ini bertipe data float
 - table = variabel ini bertipe data float
-- price = variabel ini bertipe data integer
+- price = merupakan harga diamonds
 - x = variabel ini bertipe data float
 - y = variabel ini bertipe data float
 - z = variabel ini bertipe data float
@@ -172,7 +172,7 @@ Elastic Net                  | 837.14892    | 831.40399    |
 - Metrik yang digunakan untuk mengukur hasil *training* adalah *mean squared error (MSE)*. 
 - Berdasarkan hasil training, bahwa model *Extra Trees Regressor* menghasilan nilai MSE pada saat *training* = 0.054081 dan pada saat tes = 149.967816. 
 - Berdasarkan hasil training model, maka ditetapkan bahwa algoritma yang terbaik diantara *Extra Trees Regressor* sedangkan *Lasso Regression* dan *Lasso Least Angle Regression* memiliki performa yang tidak terpaut jauh dalam memprediksi harga diamonds, yaitu algoritma *Extra Trees Regressor*.
-- Alasannya, karena nilai *Mean Squared Error (MSE)* yang dihasilkan *Extra Trees Regressor* lebih baik dari algoritma lain yang digunakan.
+- karena nilai *Mean Squared Error (MSE)* yang dihasilkan *Extra Trees Regressor* lebih baik dari algoritma lain yang digunakan.
 
 Model | y_true | prediksi_Extra Trees Regressor | prediksi_Lasso Regression | prediksi_Lasso Least Angle Regression | prediksi_Elastic Net |
 ----- | ------ | ------------------------------ | ------------------------- | ------------------------------------- | -------------------- |
