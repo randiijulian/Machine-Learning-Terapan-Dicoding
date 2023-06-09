@@ -60,13 +60,11 @@ Berdasarkan hasil visualisasi, kategori ideal pada kolom cut memiliki nilai terg
 
 Gambar 2: visualisasi variabel color dengan menggunakan histogram
 
-Berdasarkan hasil visualisasi, tidak terdapat outliers dalam variabel days_left.
+Berdasarkan hasil visualisasi, kategori G pada kolom color memiliki nilai terginggi dibandingkan dengan kategori lainnya.
 
 ![image](https://user-images.githubusercontent.com/81604461/244476079-66eba612-bf52-48c2-be9d-a517a91084b8.png?raw=true)
 
 Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
-
-Berdasarkan hasil visualisasi, maskapai penerbangan vistara memiliki jumlah data yang paling banyak dibandingkan dengan masakapai penerbangan lainnya, sedangkan maskapai penerbangan SpiceJet memiliki jumlah data yang paling sedikit dibandingkan dengan maskapai penerbangan lainnya.
 
 #### *Exploratory Data Analysis - Multivariate Analysis*
 
@@ -88,31 +86,9 @@ Gambar 6: multivariate analysis antara variabel clarity dengan price
 
 Berdasarkan hasil visualisasi, variabel departure_time cukup memiliki korelasi terhadap price.
 
-![image](https://user-images.githubusercontent.com/122204998/215325927-c2e1f93b-f6de-4eb4-adf4-ddf382d952cb.png)
-
-Gambar 7: multivariate analysis antara variabel arrival_time dengan price
-
-Berdasarkan hasil visualisasi, variabel arrival_time cukup memiliki korelasi terhadap price.
-
-![image](https://user-images.githubusercontent.com/122204998/215326002-60fecf19-efc5-4213-813b-ab022cff7bef.png)
-
-Gambar 8: multivariate analysis antara variabel destination_city dengan price
-
-Berdasarkan hasil visualisasi, variabel destination_city kurang memiliki korelasi terhadap price.
-
-![image](https://user-images.githubusercontent.com/122204998/215326095-7fde0672-65cd-4773-b75a-870225f74455.png)
-
-Berdasarkan hasil visualiasi, variabel class memiliki korelasi yang kuat terhadap price.
-
-![image](https://user-images.githubusercontent.com/81604461/244478177-d5e8d1d0-221b-43e7-a516-f3eef984be8f.png?raw=true)
-
-Gambar 9: multivariate analysis variabel carat, depth dan table terhadap price.
-
-Berdasarkan hasil visualiasi, dapat dibuat kesimpulan bahwa variabel depth dan table kurang memiliki korelasi dengan price.
-
 ![correlation matrix](https://user-images.githubusercontent.com/81604461/244479558-98e283e1-2e41-45da-a742-ac47e8d81da1.png?raw=true)
 
-Gambar 10: Correlation Matrix
+Gambar 7: Correlation Matrix
 
 Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelasi variabel table terhadap price = 0.14.
 
