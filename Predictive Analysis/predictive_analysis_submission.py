@@ -54,7 +54,7 @@ Install kaggle and using kaggle API for import public dataset from kaggle
 
 # !unzip \*.zip && rm *.zip
 
-"""## Data Preparation
+"""## Data Understanding
 
 Deskripsi variabel pada dataset
 """
@@ -81,6 +81,8 @@ setup = setup(home_data, target = 'price', session_id = 123)
 best = compare_models() #Run models for references
 
 """Melihat seluruh algoritma regresi yang ada dan melakukan perbandingan algoritma yang menghasilkan performa yang bagus berdasarkan kesesuaian dengan data yang digunakan. Berdasarkan hasil dari perbandingan model tersebut, maka proyek ini akan menggunakan algoritma Extra Trees Regressor serta menggunakan Lasso Regression.
+
+## Data Preparation
 
 ### Exploratory Data Analysis
 
@@ -110,7 +112,10 @@ home_data.loc[(home_data['z']==0)]
 home_data = home_data.loc[(home_data[['x','y','z']]!=0).all(axis=1)]
 home_data.shape
 
-"""#### Exploratory Data Analysis - Univariate Analysis"""
+"""#### Exploratory Data Analysis - Univariate Analysis
+
+Melakukan data cleansing terhadap outliers yang terdapat pada data
+"""
 
 Q1 = home_data.quantile(0.25)
 Q3 = home_data.quantile(0.75)
@@ -119,6 +124,8 @@ home_data=home_data[~((home_data<(Q1-1.5*IQR))|(home_data>(Q3+1.5*IQR))).any(axi
 
 # Cek ukuran dataset setelah kita drop outliers
 home_data.shape
+
+"""Membagi variabel menjadi numerical features dan categorical features"""
 
 numerical_features = ['price', 'carat', 'depth', 'table', 'x', 'y', 'z']
 categorical_features = ['cut', 'color', 'clarity']
@@ -150,6 +157,7 @@ for col in cat_features:
   sns.catplot(x=col, y="price", kind="bar", dodge=False, height = 4, aspect = 3,  data=home_data, palette="Set3")
   plot.title("Rata-rata 'price' Relatif terhadap - {}".format(col))
 
+# mengamati hubungan antar fitur numerik dengan fungsi pairplot()
 sns.pairplot(home_data, diag_kind = 'kde')
 
 """Melakukan visualisasi correlation matrix untuk melihat tingkat keterkaitan antar variabel"""
@@ -173,7 +181,7 @@ home_data = pd.concat([home_data, pd.get_dummies(home_data['clarity'], prefix='c
 home_data.drop(['cut','color','clarity'], axis=1, inplace=True)
 home_data.head()
 
-"""#### Splitting Dataset
+"""### Splitting Dataset
 Melakukan split data sebelum dilakukannya modeling
 """
 
