@@ -10,7 +10,7 @@ Nama : Randi Julian Saputra
 
 Github : github.com/randiijulian
 
-Dataset : kaggle.com/datasets/thedevastator/jobs-dataset-from-glassdoor
+Dataset : raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv
 
 ## Project Submission 1 Dicoding Machine Learning Terapan
 Predictive Analysis
