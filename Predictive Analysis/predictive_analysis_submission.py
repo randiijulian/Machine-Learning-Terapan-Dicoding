@@ -24,7 +24,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 
 # Commented out IPython magic to ensure Python compatibility.
-# %cd "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan"
+# %cd "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Predictive Analysis"
 
 """**Import needed library and module**"""
 
@@ -35,10 +35,6 @@ import matplotlib.pyplot as plt
 # %matplotlib inline
 import os
 import seaborn as sns
-
-from google.colab import drive
-from google.colab import data_table
-from sklearn.metrics import mean_absolute_error
 
 !pip install pycaret #Install Pycaret For references using models
 
@@ -55,6 +51,8 @@ Install kaggle and using kaggle API for import public dataset from kaggle
 # !unzip \*.zip && rm *.zip
 
 """## Data Understanding
+
+---
 
 Deskripsi variabel pada dataset
 """
@@ -84,6 +82,8 @@ best = compare_models() #Run models for references
 
 ## Data Preparation
 
+---
+
 ### Exploratory Data Analysis
 
 #### Exploratory Data Analysis - Data Cleansing
@@ -92,15 +92,15 @@ melakukan pengecekan missing value pada data
 """
 
 for col in home_data.columns: #Hitung missing value setiap kolom
-  print("Kolom : {} memiliki nilai NaN sebanyak {} dari {} row".format(col, 
-                         str(home_data[col].isna().sum()), 
+  print("Kolom : {} memiliki nilai NaN sebanyak {} dari {} row".format(col,
+                         str(home_data[col].isna().sum()),
                          str(len(home_data.index))))
 
 """melakukan pengecekan value bernilai 0 pada data"""
 
 for col in home_data.columns: #Cek yang bernilai 0
-  print("Kolom : {} memiliki nilai 0 sebanyak {} dari {} row".format(col, 
-                         str((home_data[col]==0).sum()), 
+  print("Kolom : {} memiliki nilai 0 sebanyak {} dari {} row".format(col,
+                         str((home_data[col]==0).sum()),
                          str(len(home_data.index))))
 
 home_data.isnull().sum()
@@ -186,13 +186,13 @@ Melakukan split data sebelum dilakukannya modeling
 """
 
 from sklearn.model_selection import train_test_split
- 
+
 X = home_data.drop(["price"],axis =1)
 y = home_data["price"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.1, random_state = 42)
 
 from sklearn.decomposition import PCA
- 
+
 pca = PCA(n_components=3, random_state=123)
 pca.fit(X_train[['x','y','z']])
 princ_comp = pca.transform(X_train[['x','y','z']])
@@ -216,7 +216,7 @@ X_test.drop(['x','y','z'], axis=1, inplace=True)
 X_test.head()
 
 from sklearn.preprocessing import StandardScaler
- 
+
 numerical_features = ['carat', 'table', 'dimension_index']
 scaler = StandardScaler()
 scaler.fit(X_train[numerical_features])
@@ -227,6 +227,10 @@ X_test.loc[:, numerical_features]= scaler.transform(X_test[numerical_features])
 X_train[numerical_features].describe().round(4)
 
 """## Modeling
+
+---
+
+
 Melakukan modeling dengan membandingkan beberapa algoritma yang digunakan
 
 #### Extra Trees Regressor
@@ -367,14 +371,19 @@ print("Mean Squared Error Elastic Net:", mse)
 # # Print the predicted values
 # print("Predicted values:", y_pred)
 
-"""## Evaluation"""
+"""## Evaluation
+
+---
+
+Melakukan evaluation terhadap beberapa model algoritma yang digunakan pada tahap modeling
+"""
 
 mse = pd.DataFrame(columns=['train', 'test'], index=['Extra Trees Regressor','Lasso Regression','Lasso Least Angle Regression', 'Elastic Net'])
 model_dict = {'Extra Trees Regressor': ETree_regressor, 'Lasso Regression': lasso, 'Lasso Least Angle Regression': lasso_lars, 'Elastic Net': elastic_net}
 for name, model in model_dict.items():
-    mse.loc[name, 'train'] = mean_squared_error(y_true=y_train, y_pred=model.predict(X_train))/1e3 
+    mse.loc[name, 'train'] = mean_squared_error(y_true=y_train, y_pred=model.predict(X_train))/1e3
     mse.loc[name, 'test'] = mean_squared_error(y_true=y_test, y_pred=model.predict(X_test))/1e3
- 
+
 mse
 
 fig, ax = plot.subplots()
@@ -385,7 +394,7 @@ prediksi = X_test.iloc[:10].copy()
 pred_dict = {'y_true':y_test[:10]}
 for name, model in model_dict.items():
     pred_dict['prediksi_'+name] = model.predict(prediksi).round(1)
- 
+
 pd.DataFrame(pred_dict)
 
 #Menghitung 10% Nilai Mean Squared Error (MSE)
