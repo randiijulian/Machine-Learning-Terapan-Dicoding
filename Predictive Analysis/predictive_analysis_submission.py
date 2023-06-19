@@ -78,7 +78,7 @@ setup = setup(home_data, target = 'price', session_id = 123)
 
 best = compare_models() #Run models for references
 
-"""Melihat seluruh algoritma regresi yang ada dan melakukan perbandingan algoritma yang menghasilkan performa yang bagus berdasarkan kesesuaian dengan data yang digunakan. Berdasarkan hasil dari perbandingan model tersebut, maka proyek ini akan menggunakan algoritma Extra Trees Regressor serta menggunakan Lasso Regression.
+"""Melihat seluruh algoritma regresi yang ada dan melakukan perbandingan algoritma yang menghasilkan performa yang bagus berdasarkan kesesuaian dengan data yang digunakan. Berdasarkan hasil dari perbandingan model tersebut, maka proyek ini akan menggunakan algoritma Extra Trees Regressor serta menggunakan Lasso Regression dan beberapa algoritma lainnya.
 
 ## Data Preparation
 
@@ -370,6 +370,17 @@ print("Mean Squared Error Elastic Net:", mse)
 
 # # Print the predicted values
 # print("Predicted values:", y_pred)
+
+"""#### Saving Model
+Menyimpan semua model yang telah dilatih
+"""
+
+import joblib
+
+joblib.dump(ETree_regressor, "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Predictive Analysis/Model/Model Extra Trees Regressor.joblib")
+joblib.dump(lasso, "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Predictive Analysis/Model/Model Lasso Regression.joblib")
+joblib.dump(lasso_lars, "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Predictive Analysis/Model/Model Lasso Least Angle Regression.joblib")
+joblib.dump(elastic_net, "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Predictive Analysis/Model/Model Elastic Net.joblib")
 
 """## Evaluation
 
