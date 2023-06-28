@@ -1,28 +1,28 @@
-# *Predictive Analysis Submission*
-## *Business Understanding*
-### **Latar Belakang**
+# Predictive Analysis Submission
+## 1. Business Understanding
+### 1.1 Latar Belakang
 Harga diamonds yang terlalu mahal akan membuat seseorang berpikir berkali-kali untuk memutuskan untuk membeli diamonds. Sebaliknya, harga diamonds yang terlalu murah, akan menyebabkan perusahaan tidak dapat memaksimalkan keuntungan bagi perusahaan, hal ini akan menyebabkan kerugian bagi perusahaan.
 
 Oleh sebab itu, maka perlu dibuat aplikasi yang dapat memprediksi harga ideal diamonds, untuk menjadi bahan pengambilan keputusan dalam penerapan harga diamonds ideal, sehingga harga tiket akan seimbang (tidak terlalu mahal, juga tidak terlalu murah). Harga diamonds ideal adalah harga yang sesuai dengan berdasarkan tingkat kualitas dari diamonds tersebut.
 
-### **Problem Statements**
+### 1.2 Problem Statements
 Berdasarkan penjelasan yang telah disampaikan sebelumnya, maka problem statements (rumusan masalah), yaitu sebagai berikut:
 Apa faktor-faktor yang dapat mempengaruhi harga diamonds?
 
-### **Goals**
+### 1.3 Goals
 Tujuan yang ingin dicapai dari pembuatan aplikasi prediksi harga diamonds, yaitu sebagai berikut:
 Mengetahui faktor-faktor yang mempengaruhi harga diamonds?
 Membuat aplikasi yang dapat memprediksi harga diamonds secara akurat, sebagai bahan pengambilan keputusan dalam penerapan harga diamonds ideal.
 
-### **Solution statements**
+### 1.4 Solution statements
 Solusi yang dapat dilakukan untuk menangani permasalahan sebagaimana terdapat dalam problem statements, yaitu dengan membuat aplikasi prediksi harga diamonds. Adapun aplikasi tersebut dibuat dengan menerapkan teknologi machine learning serta bahasa pemrograman python.
 Algoritma machine learning yang akan digunakan, yaitu Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
 Untuk mengukur keakuratan/keidealan prediksi harga diamonds yang dilakukan oleh aplikasi yang dibuat, maka metrik yang digunakan adalah Mean Squared Error (MSE).
 
-## *Data Understanding*
+## 2. Data Understanding
 Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi dataset terkait Diamonds Price. Dataset yang digunakan dapat didownload pada link berikut ini:(https://raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv). Jumlah data yang terdapat didalam file tersebut sebanyak 53940 data.
 
-### Variabel-variabel yang terdapat dalam dataset Diamonds:
+### 2.1 Variabel-variabel yang terdapat dalam dataset Diamonds:
 - carat = Merupakan ukuran berat batu permata dalam karat. Karat adalah satuan pengukuran yang digunakan untuk mengukur berat batu permata, di mana 1 karat setara dengan 0,2 gram.
 - cut = Merupakan kategori yang menggambarkan kualitas pemotongan batu permata. Terdapat lima tingkatan kategori untuk cut yaitu Fair, Good, Very Good, Premium, dan Ideal. Kategori Ideal dianggap sebagai kualitas pemotongan yang paling baik, sementara Fair dianggap sebagai kualitas pemotongan yang paling rendah.
 - color = Merupakan kategori yang menggambarkan warna batu permata. Terdapat tujuh tingkatan kategori untuk color, yaitu dari J (kuning) hingga D (warna terbaik, berlian tanpa warna).
@@ -34,7 +34,7 @@ Data yang digunakan adalah dataset yang bersumber dari situs Github yang berisi 
 - y = Merupakan lebar batu permata dalam mm.
 - z = Merupakan kedalaman batu permata dalam mm.
 
-## *Data Preparation*
+## 3. Data Preparation
 Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 1. Mengubah dataset *diamonds* menjadi *dataframe* dengan menggunakan *pandas*.
 2. Melakukan *exploratory data analysis* untuk memahami variabel-variabel yang terdapat dalam dataset.
@@ -44,9 +44,9 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 7. Melakukan *multivariative analysis* untuk memahami korelasi variabel kategorikal dan numberikal terhadap variabel *price*.  
 8. Membuat *correlation matrix* untuk fitur numerik.
 9. Mengeliminasi variabel numerik yang memiliki korelasi rendah terhadap variabel *price*.
-### *Exploratory Data Analysis*
-#### *Exploratory Data Analysis - Data Cleansing*
-#### *Exploratory Data Analysis - Univariate Analysis*
+
+### 3.1 Exploratory Data Analysis
+#### 3.1.1 Exploratory Data Analysis - Univariate Analysis
 
 ![image](https://user-images.githubusercontent.com/81604461/244475132-73c27ede-0132-4b89-ba81-0fc51939493a.png?raw=true)
 
@@ -64,7 +64,7 @@ Berdasarkan hasil visualisasi, kategori G pada kolom color memiliki nilai tergin
 
 Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
 
-#### *Exploratory Data Analysis - Multivariate Analysis*
+#### 3.1.2 Exploratory Data Analysis - Multivariate Analysis
 
 ![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
@@ -84,7 +84,7 @@ Gambar 7: Correlation Matrix
 
 Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelasi variabel table terhadap price = 0.14.
 
-## *Modeling*
+## 4. Modeling
 Model machine learning yang digunakan adalah Extra Trees Regressor, Lasso Regression, Lasso Least Angle Regression dan Elastic Net.
 
 **Extra Trees Regressor** adalah algoritma yang digunakan untuk masalah regresi dalam machine learning. Algoritma ini merupakan variasi dari algoritma Decision Tree yang menggunakan teknik ensemble learning. Ensemble learning menggabungkan beberapa model pembelajaran untuk meningkatkan kinerja dan kestabilan prediksi.
@@ -161,7 +161,7 @@ Keuntungan dari Elastic Net meliputi kemampuannya untuk mengatasi masalah multik
     - random_state = random_state adalah parameter yang digunakan untuk memastikan reproduktibilitas hasil. Pada model ini random state yang digunakan adalah 42.
     - mean_squared_error = Mean Squared Error (MSE) adalah metrik evaluasi yang digunakan untuk mengukur kesalahan antara nilai prediksi dan nilai sebenarnya dalam bentuk kuadrat.
 
-## *Evaluation*
+## 5. Evaluation
 Tabel 1: Hasil Evaluasi Model dengan Menggunakan Mean Squared Error
 Model                        | train        | test	       |
 ---------------------------- | -----------  | ------------ |
