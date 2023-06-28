@@ -72,14 +72,6 @@ Pada Dataset _Rating_ berisi variabel
 - ISBN (Nomor seri buku)
 - Book-Rating (rating buku)
 
-Tahapan dari Data Understanding
-
-- Data loading
-- Exploratory Data Analysis - Deskripsi Variabel
-- Exploratory Data Analysis - Menangani Missing Value dan Outliers
-- Exploratory Data Analysis - Univariate Analysis
-- Exploratory Data Analysis - Multivariate Analysis
-
 ## 4. Data Preparation
 
 ### 4.1 Data Preprocessing
@@ -116,11 +108,7 @@ kemudian, setelah dilakukan data preprocessing data harus disiapkan terlebih dah
 
 1. Mengatasi missing value
 
-   Setelah ketiga dataset telah berhasil digabungkan, kita cek lagi apakah ada missing value. Terlihat dari gambar dibawah ini masih ada missing value pada data.
-
-   ![misvalue.png](https://i.postimg.cc/nL7wrxJf/misvalue.png)
-
-   Missing value dapat diatasi dengan perintah dropna()
+   Setelah ketiga dataset telah berhasil digabungkan, kita cek lagi apakah ada missing value. Pada data yang digunakan masih terdapat missing value, maka dari itu penulis mengatasi missing value dengan menggunakan perintah dropna().
 
 ## 5. Modeling
 
@@ -151,6 +139,8 @@ berarti bahwa sistem dapat menebak dengan benar empat dari setiap lima film favo
 Meskipun precision dan recall adalah metric yang terpisah, tetapi mereka sebenarnya terkait. Biasanya, presisi tinggi berarti daya ingat rendah dan mengingat tinggi berarti presisi rendah. Salah satu cara populer untuk menggabungkan presisi dan recall menjadi satu metrik adalah menghitung F-measure, yang merupakan rata-rata harmonik dari keduanya.
 
 Formula:
+
+$$ F - MEASURE = {2 _ (PRECISION _ RECALL) \over PRECISION + CALL} $$
 
 ![](https://i.postimg.cc/CK5DtVJv/image.png)
 
