@@ -1,4 +1,4 @@
-# _Recommender System Submission_
+# Recommender System Submission
 
 ## 1. Project Overview
 
