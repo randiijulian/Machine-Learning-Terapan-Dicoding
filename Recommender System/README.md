@@ -145,7 +145,6 @@ $$ F - MEASURE = {2 * (PRECISION * RECALL) \over PRECISION + CALL} $$
 **[6]**
 
 ## Daftra Pustaka
-___
 
 [1] [S. K. Dirjen et al., ‘Sistem Rekomendasi Buku untuk Perpustakaan Perguruan Tinggi Berbasis Association Rule’, masa berlaku mulai, vol. 1, no. 3, pp. 304–312, 2017.](http://jurnal.iaii.or.id/index.php/RESTI/article/view/971/158)
 
