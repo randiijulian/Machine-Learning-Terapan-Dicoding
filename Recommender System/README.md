@@ -140,7 +140,7 @@ Meskipun precision dan recall adalah metric yang terpisah, tetapi mereka sebenar
 
 Formula:
 
-$$ F - MEASURE = {2 _ (PRECISION _ RECALL) \over PRECISION + CALL} $$
+$$ F - MEASURE = {2 * (PRECISION * RECALL) \over PRECISION + CALL} $$
 
 ![](https://i.postimg.cc/CK5DtVJv/image.png)
 
