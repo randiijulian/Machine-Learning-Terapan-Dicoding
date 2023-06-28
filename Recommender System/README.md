@@ -120,12 +120,23 @@ dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak ma
 - False Positive (FP): p = positive, r = negative
 - True Negative (TN): p = negative, r = negative
 
-Precision dan recall merangkum angka-angka ini menjadi lebih banyak metrik intuitif. Precision adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, Precision 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ingat adalah
-sebagian kecil dari semua rekomendasi positif yang sebenarnya
-positif. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24]. Misalnya, Recall 80%
+Precision dan recall merangkum angka-angka ini menjadi lebih banyak metrik intuitif. Precision adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, Precision 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24]. Misalnya, Recall 80%
 berarti bahwa sistem dapat menebak dengan benar empat dari setiap lima film favorit Anda.
 
 Meskipun precision dan recall adalah metric yang terpisah, tetapi mereka sebenarnya terkait. Biasanya, presisi tinggi berarti daya ingat rendah dan mengingat tinggi berarti presisi rendah. Salah satu cara populer untuk menggabungkan presisi dan recall menjadi satu metrik adalah menghitung F-measure, yang merupakan rata-rata harmonik dari keduanya.
+
+Untuk mendapatkan nilai presisi sebesar 60%, Anda perlu menghitung metrik presisi (precision) berdasarkan hasil prediksi yang Anda miliki. Presisi merupakan rasio dari true positive (positif yang benar) dibagi dengan jumlah total prediksi positif (true positive + false positive). Berikut adalah langkah-langkah umum untuk mencapai nilai presisi 60%:
+1. Tentukan metrik evaluasi: Dalam hal ini, kita tertarik untuk mendapatkan nilai presisi. Jadi, kita akan fokus pada menghitung presisi.
+
+2. Hitung true positive (TP) dan false positive (FP): True positive adalah jumlah prediksi positif yang benar, sedangkan false positive adalah jumlah prediksi positif yang salah.
+
+3. Tentukan persamaan untuk menghitung presisi: Presisi dapat dihitung menggunakan persamaan berikut:
+Presisi = TP / (TP + FP)
+
+4. Atur persamaan agar menghasilkan nilai presisi 60%: Misalnya, jika Anda ingin mendapatkan presisi sebesar 60%, Anda dapat memodifikasi persamaan menjadi:
+TP / (TP + FP) = 0.6
+
+5. Selesaikan persamaan untuk mendapatkan nilai TP: Dalam persamaan di atas, TP adalah variabel yang tidak diketahui. Anda perlu mencari nilai TP yang memenuhi persamaan tersebut agar presisinya menjadi 60%.
 
 Formula:
 
