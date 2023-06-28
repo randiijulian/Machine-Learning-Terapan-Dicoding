@@ -1,34 +1,33 @@
-# Recommender System Submission
+# _Recommender System Submission_
 
-## 1. Project Overview
+## 1. _Project Overview_
 
-Pada project Machine Learning saya membuat Recommender System mengenai pencarian buku berdasarkan preferensi pengguna dan rating yang diberikan pengguna sebelumnya. Perpustakaan sudah merambah ke ranah digital. Keberadaan sistem informasi perpustakaan di perguruan tinggi dapat dirasakan telah memudahkan para pengunjung, baik mahasiswa maupun dosen, dalam mencari bahan referensi yang menjadi koleksi perpustakaan dimaksud.
+Perpustakaan sudah merambah ke ranah digital. Keberadaan sistem informasi perpustakaan di perguruan tinggi dapat dirasakan telah memudahkan para pengunjung, baik mahasiswa maupun dosen, dalam mencari bahan referensi yang menjadi koleksi perpustakaan dimaksud **[1]**.
+Saat ini telah banyak sekali buku-buku yang disediakan oleh perpustakaan. Tak jarang buku-buku tersebut tidak sesuai tentang isi yang terdapat pada buku dan cover buku yang terlihat bagus. Oleh karena itu, pengguna platform perpustakaan digital perlu diberikan rasa nyaman dengan memfilter buku-buku yang direkomendasikan kepada user.
 
-Proyek ini berguna ketika pengunjung perpustakaan kampus menelusuri judul buku dan judul buku terkait tidak tersedia dan tidak adanya rekomendasi untuk buku-buku lain yang mungkin menarik untuk dibaca atau bahkan dibutuhkan sebagai pelengkap dari judul buku yang diinginkan, maka peran sistem rekomendasi disini sangat dibutuhkan **[1]**. Rekomendasi tersebut bisa berdasarkan preferensi pengunjung dan rating yang diberikan pengunjung sebelumnya.
-
-## 2. Business Understanding
+## 2. _Business Understanding_
 
 Meskipun sistem cukup membantu pengunjung dalam mencari buku yang mereka inginkan. Terdapat masalah yang perlu diselesaikan dengan sistem rekomendasi yang akan saya buat.
 
-### 2.1 Problem Statements
+### 2.1 _Problem Statements_
 
 Permasalahannya adalah pengunjung sering terpaku hanya pada judul buku yang mereka inginkan. Ketika buku itu tidak tersedia, tidak ada rekomendasi untuk buku-buku lain yang mungkin menarik untuk dibaca atau bahkan dibutuhkan sebagai pelengkap dari judul buku yang diinginkan. Kondisi ini dapat menyebabkan berkurangnya minat pengunjung untuk mengeksplorasi koleksi perpustakaan lainnya, dan berarti mengecilkan tujuan dan peran perpustakaan di dalam meningkatkan minat baca mahasiswa dan akademisi di perguruan tinggi.
 
-### 2.2 Goals
+### 2.2 _Goals_
 
 Tujuan dari dibuat nya sistem rekomendasi ini adalah agar dapat membantu pengunjung perpustakaan dalam mencari buku dengan lebih Efektif. Efektif dalam hal merekomendasikan buku terkait yang ditelusuri pengguna berdasarkan preferensi dan rating buku sehingga dapat meningkatkan minat baca mahasiswa dan akademisi diperpustakaan perguruan tinggi.
 
-### 2.3 Solution statements
+### 2.3 _Solution statements_
 
-Solusi dalam menyelesaikan masalah ini yaitu saya menggunakan algoritma content based filtering dan Collaborative Filtering
+Solusi dalam menyelesaikan masalah ini yaitu saya menggunakan algoritma _Content Based Filtering_ dan _Collaborative Filtering_
 
 ![1_aSq9viZGEYiWwL9uJ3Recw](https://user-images.githubusercontent.com/46146748/63115930-5f6c1900-bf66-11e9-894f-ecde5ec531b0.png)
 
-- **Content Based Filtering**. Metode Content-Based Filtering bekerja dengan melihat kemiripan item baru dengan item yang sebelumnya. Content-BasedFiltering memberikan rekomendasi berdasarkan kemiripan item yang dianalisis dari fitur yang dikandung oleh item sebelumnya **[2]**.
+- **_Content Based Filtering_**. Metode _Content-Based Filtering_ bekerja dengan melihat kemiripan item baru dengan item yang sebelumnya. _Content-Based Filtering_ memberikan rekomendasi berdasarkan kemiripan item yang dianalisis dari fitur yang dikandung oleh item sebelumnya **[2]**.
 
-- **Collaborative Filtering**. Collaborative filtering merupakan proses penyaringan atau pengevaluasian item menggunakan opini orang lain. Collaborative filtering melakukan penyaringan data berdasarkan kemiripan karakteristik konsumen sehingga mampu memberikan informasi yang baru kepada konsumen karena sistem memberikan informasi berdasarkan pola satu kelompok konsumen menjadikan sumber informasi baru yang mungkin bermanfaat bagi anggota kelompok lainnya.Berikut adalah persamaan cosine similarity yang digunakan untuk menghitung nilai kemiripan diantara item **[3]**.
+- **_Collaborative Filtering_**. _Collaborative filtering_ merupakan proses penyaringan atau pengevaluasian item menggunakan opini orang lain. _Collaborative filtering_ melakukan penyaringan data berdasarkan kemiripan karakteristik konsumen sehingga mampu memberikan informasi yang baru kepada konsumen karena sistem memberikan informasi berdasarkan pola satu kelompok konsumen menjadikan sumber informasi baru yang mungkin bermanfaat bagi anggota kelompok lainnya.Berikut adalah persamaan _cosine similarity_ yang digunakan untuk menghitung nilai kemiripan diantara item **[3]**.
 
-## 3 Data Understanding
+## 3 _Data Understanding_
 
 Data ini dapat diunduh pada link dibawah ini
 [Link Dataset](https://www.kaggle.com/arashnic/book-recommendation-dataset)
@@ -65,9 +64,9 @@ Pada Dataset _Rating_ berisi variabel
 - ISBN (Nomor seri buku)
 - Book-Rating (rating buku)
 
-## 4. Data Preparation
+## 4. _Data Preparation_
 
-### 4.1 Data Preprocessing
+### 4.1 _Data Preprocessing_
 
 Tahapan preprocessing pada laporan ini penting untuk menyatukan ketiga dataset yang saya gunakan yaitu:
 
@@ -97,50 +96,51 @@ Adapun prosesnya yaitu:
 
    Langkah selanjutnya adalah menggabungkan variabel all_book_name yang kita peroleh dari tahapan sebelumnya dengan fitur publisher buku. Tujuannya, agar kita mengetahui publisher yang menerbitkan buku.
 
-kemudian, setelah dilakukan data preprocessing data harus disiapkan terlebih dahulu. Adapun langkah persiapan data yang saya lakukan yaitu:
+kemudian, setelah dilakukan _data preprocessing_ data harus disiapkan terlebih dahulu. Adapun langkah persiapan data yang saya lakukan yaitu:
 
-1. Mengatasi missing value
+1. Mengatasi _missing value_
 
-   Setelah ketiga dataset telah berhasil digabungkan, kita cek lagi apakah ada missing value. Pada data yang digunakan masih terdapat missing value, maka dari itu penulis mengatasi missing value dengan menggunakan perintah dropna().
+   Setelah ketiga dataset telah berhasil digabungkan, kita cek lagi apakah ada _missing value_. Pada data yang digunakan masih terdapat _missing value_, maka dari itu penulis mengatasi _missing value_ dengan menggunakan perintah dropna().
 
-## 5. Modeling
+## 5. _Modeling_
 
-Saya memilih 2 model yaitu content based filtering dan collaborative filtering.
-Content Based Filtering untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**.
+Saya memilih 2 model yaitu content _based filtering_ dan _collaborative filtering_.
+_Content Based Filtering_ untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**.
 
-Collaborative Filtering untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**.
+_Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**.
 
-## 6. Evaluation
+## 6. _Evaluation_
 
 Metrik klasifikasi mengukur seberapa baik sistem rekomendasi
-dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Ambang batas yang lebih masuk akal akan menjadi rata-rata vektor, yaitu, peringkat positif jika lebih besar dari atau sama dengan rata-rata vektor. Ambang batas toleransi menghasilkan skala biner, baik orang tersebut menyukai item (positif) atau tidak (negatif). Demikian juga, rekomendasi bisa benar (true) atau salah (false). Pengikut metrik menghitung jumlah kemunculan setiap prediksi (p) dan nilai aktual (r)
+dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Ambang batas yang lebih masuk akal akan menjadi rata-rata vektor, yaitu, peringkat positif jika lebih besar dari atau sama dengan rata-rata vektor. Ambang batas toleransi menghasilkan skala biner, baik orang tersebut menyukai item (positif) atau tidak (negatif). Demikian juga, rekomendasi bisa benar (_true_) atau salah (_false_). Pengikut metrik menghitung jumlah kemunculan setiap prediksi (p) dan nilai aktual (r)
 
-- True Positive (TP): p = positive, r = positive
-- False Negative (FN): p = negative, r = positive
-- False Positive (FP): p = positive, r = negative
-- True Negative (TN): p = negative, r = negative
+- _True Positive_ (TP): p = _positive_, r = _positive_
+- _False Negative_ (FN): p = _negative_, r = _positive_
+- _False Positive_ (FP): p = _positive_, r = _negative_
+- _True Negative_ (TN): p = _negative_, r = _negative_
 
-Precision dan recall merangkum angka-angka ini menjadi lebih banyak metrik intuitif. Precision adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, Precision 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24]. Misalnya, Recall 80%
-berarti bahwa sistem dapat menebak dengan benar empat dari setiap lima film favorit Anda.
+_Precision_ dan _recall_ merangkum angka-angka ini menjadi lebih banyak metrik intuitif. _Precision_ adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, _Precision_ 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24]. Misalnya, _Recall_ 80%
+berarti bahwa sistem dapat menebak dengan benar empat dari setiap lima film favorit.
 
-Meskipun precision dan recall adalah metric yang terpisah, tetapi mereka sebenarnya terkait. Biasanya, presisi tinggi berarti daya ingat rendah dan mengingat tinggi berarti presisi rendah. Salah satu cara populer untuk menggabungkan presisi dan recall menjadi satu metrik adalah menghitung F-measure, yang merupakan rata-rata harmonik dari keduanya.
+Meskipun _precision_ dan _recall_ adalah _metric_ yang terpisah, tetapi mereka sebenarnya terkait. Biasanya, presisi tinggi berarti daya ingat rendah dan mengingat tinggi berarti presisi rendah. Salah satu cara populer untuk menggabungkan _precision_ dan _recall_ menjadi satu metrik adalah menghitung F-measure, yang merupakan rata-rata harmonik dari keduanya.
 
-Untuk mendapatkan nilai presisi sebesar 60%, Anda perlu menghitung metrik presisi (precision) berdasarkan hasil prediksi yang Anda miliki. Presisi merupakan rasio dari true positive (positif yang benar) dibagi dengan jumlah total prediksi positif (true positive + false positive). Berikut adalah langkah-langkah umum untuk mencapai nilai presisi 60%:
+Untuk mendapatkan nilai presisi sebesar 60%, perlu menghitung metrik presisi (_precision_) berdasarkan hasil prediksi yang dimiliki. Presisi merupakan rasio dari _true positive_ (positif yang benar) dibagi dengan jumlah total prediksi positif (_true positive_ + _false positive_). Berikut adalah langkah-langkah umum untuk mencapai nilai presisi 60%:
+
 1. Tentukan metrik evaluasi: Dalam hal ini, kita tertarik untuk mendapatkan nilai presisi. Jadi, kita akan fokus pada menghitung presisi.
 
-2. Hitung true positive (TP) dan false positive (FP): True positive adalah jumlah prediksi positif yang benar, sedangkan false positive adalah jumlah prediksi positif yang salah.
+2. Hitung _true positive_ (TP) dan _false positive_ (FP): _True positive_ adalah jumlah prediksi positif yang benar, sedangkan _false positive_ adalah jumlah prediksi positif yang salah.
 
 3. Tentukan persamaan untuk menghitung presisi: Presisi dapat dihitung menggunakan persamaan berikut:
-Presisi = TP / (TP + FP)
+   Presisi = TP / (TP + FP)
 
-4. Atur persamaan agar menghasilkan nilai presisi 60%: Misalnya, jika Anda ingin mendapatkan presisi sebesar 60%, Anda dapat memodifikasi persamaan menjadi:
-TP / (TP + FP) = 0.6
+4. Atur persamaan agar menghasilkan nilai presisi 60%: Misalnya, jika ingin mendapatkan presisi sebesar 60%, maka dapat memodifikasi persamaan menjadi:
+   TP / (TP + FP) = 0.6
 
-5. Selesaikan persamaan untuk mendapatkan nilai TP: Dalam persamaan di atas, TP adalah variabel yang tidak diketahui. Anda perlu mencari nilai TP yang memenuhi persamaan tersebut agar presisinya menjadi 60%.
+5. Selesaikan persamaan untuk mendapatkan nilai TP: Dalam persamaan di atas, TP adalah variabel yang tidak diketahui. Maka perlu mencari nilai TP yang memenuhi persamaan tersebut agar presisinya menjadi 60%.
 
 Formula:
 
-$$ F - MEASURE = {2 * (PRECISION * RECALL) \over PRECISION + CALL} $$
+$$ F - MEASURE = {2*(PRECISION*RECALL) \over PRECISION+CALL} $$
 
 **[6]**
 
