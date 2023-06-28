@@ -106,26 +106,44 @@ kemudian, setelah dilakukan _data preprocessing_ data harus disiapkan terlebih d
 
 Penulis memilih 2 model yaitu _content based filtering_ dan _collaborative filtering_.
 
-_Content Based Filtering_ untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**. _Content-Based Filtering_ memiliki kelebihan:
+_Content Based Filtering_ untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**.
 
+Cara kerja dari *Content Based Filtering* yaitu:
+1. Pengumpulan Data: Pertama, atribut-atribut konten dari setiap item (misalnya, buku) dikumpulkan dan direpresentasikan dalam bentuk vektor fitur. Contoh atribut bisa berupa genre buku, penulis, atau kata kunci.
+
+2. Pembuatan Profil Pengguna: Profil pengguna dibuat berdasarkan preferensi pengguna atau ulasan sebelumnya. Profil ini juga direpresentasikan dalam vektor fitur yang mirip dengan atribut konten item.
+
+3. Perhitungan Kesamaan: Menggunakan metrik kesamaan seperti cosine similarity, perhitungan kesamaan antara profil pengguna dan item-item yang tersedia dilakukan. Ini mengukur sejauh mana atribut-atribut konten pengguna dan item cocok.
+
+4. Pemeringkatan dan Rekomendasi: Item-item yang memiliki kesamaan yang tinggi dengan profil pengguna mendapatkan peringkat yang lebih tinggi dan direkomendasikan kepada pengguna. Rekomendasi ini didasarkan pada atribut konten yang cocok dengan preferensi pengguna.
+
+Kelebihan algoritma _Content-Based Filtering_:
 1. Tidak memerlukan data riwayat pengguna: Algoritma _content-based filtering_ dapat memberikan rekomendasi berdasarkan informasi konten dari item yang relevan (misalnya, atribut buku seperti genre, penulis, atau kata kunci). Dengan demikian, tidak memerlukan data riwayat pengguna, yang dapat berguna jika ada keterbatasan dalam mengumpulkan riwayat pengguna atau untuk pengguna baru.
 
 2. Kemampuan untuk memberikan rekomendasi personalisasi: Algoritma ini dapat menyediakan rekomendasi yang sesuai dengan preferensi individu pengguna. Dengan membandingkan preferensi pengguna dengan atribut konten item, algoritma dapat memilih item yang paling relevan untuk disarankan.
 
-serta kekurangan sebagai berikut:
-
+Kekurangan algoritma *Content-Based Filtering*:
 1. Keterbatasan dalam variasi rekomendasi: Algoritma _content-based filtering_ cenderung menghasilkan rekomendasi yang serupa dengan item yang telah disukai oleh pengguna sebelumnya. Ini dapat membatasi variasi rekomendasi dan mengabaikan item-item baru atau berbeda yang mungkin menarik bagi pengguna.
 
 2. Tidak dapat menggambarkan hubungan kompleks antara item: Algoritma ini cenderung berfokus pada atribut konten yang diberikan, seperti genre atau penulis, tetapi tidak secara eksplisit memperhitungkan hubungan yang lebih kompleks antara item. Ini berarti algoritma mungkin tidak dapat merekomendasikan item yang memiliki karakteristik konten yang berbeda tetapi sering digemari oleh pengguna dengan preferensi serupa.
 
-_Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. Dengan kelebihan:
+_Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
 
+Cara kerja dari *Collaborative Filtering* yaitu:
+1. Pengumpulan Data: Data riwayat pengguna, termasuk preferensi, ulasan, atau penilaian pada item yang telah dikonsumsi, dikumpulkan.
+
+2. Identifikasi Pengguna dengan Minat Serupa: Berdasarkan data riwayat pengguna, pengguna dengan minat serupa diidentifikasi menggunakan metode seperti Neighborhood-based Collaborative Filtering atau Model-based Collaborative Filtering.
+
+3. Penilaian dan Peringkat: Item-item yang belum dilihat atau dikonsumsi oleh pengguna tersebut dinilai dan diberikan peringkat berdasarkan preferensi pengguna dengan minat serupa. Metode seperti Collaborative Filtering with Matrix Factorization digunakan untuk memperoleh peringkat ini.
+
+4. Rekomendasi: Item dengan peringkat tertinggi direkomendasikan kepada pengguna. Item-item ini adalah item yang disukai oleh pengguna dengan minat serupa dan mungkin belum ditemukan oleh pengguna.
+
+Kelebihan algoritma *Collaborative Filtering*:
 1. Kemampuan untuk merekomendasikan item baru dan berbeda: _Collaborative filtering_ dapat merekomendasikan item yang belum pernah dilihat atau disukai oleh pengguna berdasarkan preferensi dan riwayat pengguna lain dengan minat serupa. Ini memungkinkan pengguna untuk menemukan item baru yang mungkin tidak ditemukan melalui pendekatan _content-based filtering_.
 
 2. Mampu menangani kompleksitas hubungan antara item: Algoritma _collaborative filtering_ memperhitungkan hubungan kompleks antara item yang muncul dari pola preferensi pengguna secara kolektif. Ini dapat membantu mengungkapkan hubungan yang tidak terlihat dalam atribut konten item.
 
-serta kekurangan sebagai berikut:
-
+Kekurangan algoritma *Collaborative Filtering*:
 1. Membutuhkan data riwayat pengguna: _Collaborative filtering_ memerlukan data riwayat pengguna yang signifikan untuk memberikan rekomendasi yang akurat. Jika data riwayat pengguna terbatas atau jika ada keterbatasan privasi yang menghambat pengumpulan data riwayat, kinerja algoritma dapat terpengaruh.
 
 2. Masalah long-tail: Algoritma _collaborative filtering_ mungkin menghadapi tantangan dalam merekomendasikan item yang jarang muncul atau memiliki jumlah ulasan dan penilaian yang terbatas. Ini dikenal sebagai masalah "_long-tail_", di mana algoritma cenderung mengabaikan item dengan popularitas rendah.
