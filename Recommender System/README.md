@@ -140,7 +140,7 @@ TP / (TP + FP) = 0.6
 
 Formula:
 
-$$ F - MEASURE = {2 * (PRECISION * RECALL) \over PRECISION + CALL} $$ **[6]**
+$$ F - MEASURE = {2 * (PRECISION * RECALL) \over PRECISION + CALL} $$ 
 
 ## Daftra Pustaka
 
