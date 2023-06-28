@@ -7,7 +7,7 @@ Saat ini telah banyak sekali buku-buku yang disediakan oleh perpustakaan. Tak ja
 
 ## 2. _Business Understanding_
 
-Meskipun sistem cukup membantu pengunjung dalam mencari buku yang mereka inginkan. Terdapat masalah yang perlu diselesaikan dengan sistem rekomendasi yang akan saya buat.
+Meskipun sistem cukup membantu pengunjung dalam mencari buku yang mereka inginkan. Terdapat masalah yang perlu diselesaikan dengan sistem rekomendasi yang akan penulis buat.
 
 ### 2.1 _Problem Statements_
 
@@ -19,7 +19,7 @@ Tujuan dari dibuat nya sistem rekomendasi ini adalah agar dapat membantu pengunj
 
 ### 2.3 _Solution statements_
 
-Solusi dalam menyelesaikan masalah ini yaitu saya menggunakan algoritma _Content Based Filtering_ dan _Collaborative Filtering_
+Solusi dalam menyelesaikan masalah ini yaitu penulis menggunakan algoritma _Content Based Filtering_ dan _Collaborative Filtering_
 
 ![1_aSq9viZGEYiWwL9uJ3Recw](https://user-images.githubusercontent.com/46146748/63115930-5f6c1900-bf66-11e9-894f-ecde5ec531b0.png)
 
@@ -68,7 +68,7 @@ Pada Dataset _Rating_ berisi variabel
 
 ### 4.1 _Data Preprocessing_
 
-Tahapan preprocessing pada laporan ini penting untuk menyatukan ketiga dataset yang saya gunakan yaitu:
+Tahapan preprocessing pada laporan ini penting untuk menyatukan ketiga dataset yang penulis gunakan yaitu:
 
 - Book
 - User
@@ -96,7 +96,7 @@ Adapun prosesnya yaitu:
 
    Langkah selanjutnya adalah menggabungkan variabel all_book_name yang kita peroleh dari tahapan sebelumnya dengan fitur publisher buku. Tujuannya, agar kita mengetahui publisher yang menerbitkan buku.
 
-kemudian, setelah dilakukan _data preprocessing_ data harus disiapkan terlebih dahulu. Adapun langkah persiapan data yang saya lakukan yaitu:
+kemudian, setelah dilakukan _data preprocessing_ data harus disiapkan terlebih dahulu. Adapun langkah persiapan data yang penulis lakukan yaitu:
 
 1. Mengatasi _missing value_
 
@@ -104,7 +104,7 @@ kemudian, setelah dilakukan _data preprocessing_ data harus disiapkan terlebih d
 
 ## 5. _Modeling_
 
-Saya memilih 2 model yaitu _content based filtering_ dan _collaborative filtering_.
+Penulis memilih 2 model yaitu _content based filtering_ dan _collaborative filtering_.
 
 _Content Based Filtering_ untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**. _Content-Based Filtering_ memiliki kelebihan:
 
