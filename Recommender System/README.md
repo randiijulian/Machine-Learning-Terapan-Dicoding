@@ -12,7 +12,9 @@ Dari kondisi yang telah dijelaskan di atas, akan dibuat sebuah sistem rekomendas
 * Bagaimana kita dapat memanfaatkan informasi dari pengguna, buku, dan riwayat peminjaman untuk menghasilkan rekomendasi yang personal dan akurat?
 
 ### 2.2 _Goals_
-Tujuan dari dibuat nya sistem rekomendasi ini adalah agar dapat membantu pengunjung perpustakaan dalam mencari buku dengan lebih Efektif. Efektif dalam hal merekomendasikan buku terkait yang ditelusuri pengguna berdasarkan preferensi dan rating buku sehingga dapat meningkatkan minat baca mahasiswa dan akademisi diperpustakaan perguruan tinggi.
+* Membuat sistem rekomendasi yang bisa memberikan rekomendasi buku yang relevan dengan preferensi pengguna.
+* Mengetahui kemampuan sistem rekomendasi dalam memberikan rekomendasi buku kepada pengguna.
+* Mengoptimalkan pemanfaatan data pelanggan dan buku yang ada untuk membuat sistem rekomendasi lebih akurat dan presisi.
 
 ### 2.3 _Solution statements_
 Solusi dalam menyelesaikan masalah ini yaitu penulis menggunakan algoritma _Content Based Filtering_ dan _Collaborative Filtering_
