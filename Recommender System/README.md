@@ -113,9 +113,33 @@ Kelebihan dari pendekatan ini adalah kemampuannya dalam memberikan rekomendasi y
 Output dari pendekatan Content-Based Filtering ini adalah daftar produk rekomendasi berdasarkan *keyword* yang dimasukan. Misalnya, pengguna aplikasi melakukan pencarian dengan *keyword* "*fantasy*", maka akan ditampilkan beberapa rekomendasi produk yang relevan dengan *keyword* "*fantasy*".
 
 Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *keyword tittle* dari buku yang terdapat pada dataset, untuk contoh yang penulis gunakan yaitu *keyword* "Billy Strobe".
-Diperoleh top 5 rekomendasi produk berdasarkan keyword tersebut:
+Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 
-Tabel 1. Top 5 rekomendasi buku dengan Content-Based Filtering
+Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
+|    |                       title                       |       publisher       |
+|:--:|:-------------------------------------------------:|:---------------------:|
+|  0 | The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
+|  1 | Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
+|  2 | The Vulture Fund                                  |      Signet Book      |
+|  3 | Blood Relations                                   |      Signet Book      |
+|  4 | She Walks These Hills                             |      Signet Book      |
+|  5 | The Rosewood Casket                               |      Signet Book      |
+|  6 | First Offense                                     |      Signet Book      |
+|  7 | First Offense                                     |      Penguin USA      |
+|  8 | Story Bible: The New Testament (Story Bible)      |      Signet Book      |
+|  9 | StarGate: A Novel                                 |      Signet Book      |
+
+_Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
+
+Berbeda dengan pendekatan *Content-Based Filtering* yang hanya menggunakan data informasi tentang produk saja, pendekatan ini akan menggunakan data pelanggan juga.
+
+Dataset yang digunakan dibagi menjadi data traning dan data testing dengan rasio 80%:20%.
+
+Kelebihan dari pendekatan ini adalah kemampuannya dalam menemukan pola preferensi pelanggan yang kompleks dan merekomendasikan produk berdasarkan preferensi serupa dari pelanggan lain. Namun kekurangan dari pendekatan ini adalah adanya masalah *cold-start*, yaitu saat pelanggan baru atau produk baru tidak memiliki cukup interaksi untuk memberikan rekomendasi yang akurat.
+
+*Output dari* pendekatan ini adalah daftar produk rekomendasi untuk setiap pelanggan. Misalnya, pelanggan B akan menerima rekomendasi berupa daftar produk buku yang banyak disukai oleh pelanggan lain dengan preferensi yang serupa.
+
+Tabel 2. Top 5 rekomendasi buku dengan Content-Based Filtering
 |    |                       title                       |       publisher       |
 |:--:|:-------------------------------------------------:|:---------------------:|
 |  0 | The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
@@ -124,44 +148,37 @@ Tabel 1. Top 5 rekomendasi buku dengan Content-Based Filtering
 |  3 | Blood Relations                                   |      Signet Book      |
 |  4 | She Walks These Hills                             |      Signet Book      |
 
-_Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
-
-Cara kerja dari *Collaborative Filtering* yaitu:
-1. Pengumpulan Data: Data riwayat pengguna, termasuk preferensi, ulasan, atau penilaian pada item yang telah dikonsumsi, dikumpulkan.
-
-2. Identifikasi Pengguna dengan Minat Serupa: Berdasarkan data riwayat pengguna, pengguna dengan minat serupa diidentifikasi menggunakan metode seperti Neighborhood-based Collaborative Filtering atau Model-based Collaborative Filtering.
-
-3. Penilaian dan Peringkat: Item-item yang belum dilihat atau dikonsumsi oleh pengguna tersebut dinilai dan diberikan peringkat berdasarkan preferensi pengguna dengan minat serupa. Metode seperti Collaborative Filtering with Matrix Factorization digunakan untuk memperoleh peringkat ini.
-
-4. Rekomendasi: Item dengan peringkat tertinggi direkomendasikan kepada pengguna. Item-item ini adalah item yang disukai oleh pengguna dengan minat serupa dan mungkin belum ditemukan oleh pengguna.
-
-Kelebihan algoritma *Collaborative Filtering*:
-1. Kemampuan untuk merekomendasikan item baru dan berbeda: _Collaborative filtering_ dapat merekomendasikan item yang belum pernah dilihat atau disukai oleh pengguna berdasarkan preferensi dan riwayat pengguna lain dengan minat serupa. Ini memungkinkan pengguna untuk menemukan item baru yang mungkin tidak ditemukan melalui pendekatan _content-based filtering_.
-
-2. Mampu menangani kompleksitas hubungan antara item: Algoritma _collaborative filtering_ memperhitungkan hubungan kompleks antara item yang muncul dari pola preferensi pengguna secara kolektif. Ini dapat membantu mengungkapkan hubungan yang tidak terlihat dalam atribut konten item.
-
-Kekurangan algoritma *Collaborative Filtering*:
-1. Membutuhkan data riwayat pengguna: _Collaborative filtering_ memerlukan data riwayat pengguna yang signifikan untuk memberikan rekomendasi yang akurat. Jika data riwayat pengguna terbatas atau jika ada keterbatasan privasi yang menghambat pengumpulan data riwayat, kinerja algoritma dapat terpengaruh.
-
-2. Masalah long-tail: Algoritma _collaborative filtering_ mungkin menghadapi tantangan dalam merekomendasikan item yang jarang muncul atau memiliki jumlah ulasan dan penilaian yang terbatas. Ini dikenal sebagai masalah "_long-tail_", di mana algoritma cenderung mengabaikan item dengan popularitas rendah.
-
 ## 6. _Evaluation_
-Metrik klasifikasi mengukur seberapa baik sistem rekomendasi
-dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Ambang batas yang lebih masuk akal akan menjadi rata-rata vektor, yaitu, peringkat positif jika lebih besar dari atau sama dengan rata-rata vektor. Ambang batas toleransi menghasilkan skala biner, baik orang tersebut menyukai item (positif) atau tidak (negatif). Demikian juga, rekomendasi bisa benar (_true_) atau salah (_false_). Pengikut metrik menghitung jumlah kemunculan setiap prediksi (p) dan nilai aktual (r)
+Metrik klasifikasi mengukur seberapa baik sistem rekomendasi dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Setelah model berhasil dibuat, akan dilakukan evaluasi dengan menggunakan metrik evaluasi untuk memvalidasi performa model. 
+### 6.1. *Content-Based Filtering*
+Pada pendekatan *Content-Based Filtering*, akan digunakan metrik evaluasi *precision*.
 
-- _True Positive_ (TP): p = _positive_, r = _positive_
-- _False Negative_ (FN): p = _negative_, r = _positive_
-- _False Positive_ (FP): p = _positive_, r = _negative_
-- _True Negative_ (TN): p = _negative_, r = _negative_
+*Precision* adalah metrik evaluasi yang digunakan untuk mengukur sejauh mana sistem rekomendasi mampu memberikan rekomendasi yang relevan dan tepat kepada pengguna. Precision menggambarkan persentase item rekomendasi yang relevan dari keseluruhan item yang direkomendasikan. Presisi dapat dihitung menggunakan rumus berikut:
 
-_Precision_ dan _recall_ merangkum angka-angka ini menjadi lebih banyak metrik intuitif. _Precision_ adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, _Precision_ 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24]. Misalnya, _Recall_ 80%
-berarti bahwa sistem dapat menebak dengan benar empat dari setiap lima film favorit.
+$$ precision = {TP \over TP + FP} $$
+
+dimana:
+* TP (*True Positive*) : jumlah item rekomendasi yang relevan yang benar-benar dipilih oleh pengguna
+* FP (*False Positive*) : jumlah item rekomendasi yang tidak relevan yang dipilih oleh pengguna.
+
+Digunakan 1 pencarian produk secara acak, yaitu:
+1. *"Billy Strobe"*. Dari 20 rekomendasi yang diberikan hampir semuanya relevan. Sehingga nilai presisinya 90%.
+
+Dari hasil pencarian produk di atas, diperoleh nilai akurasi 90% yang berarti semua hasil pencarian memperoleh rekomendasi yang relevan.
+
+
+### 6.2. *Collaborative Filtering*
+Pada pendekatan *Collaborative Filtering*, digunakan *Precison* dan *Recall*, _Precision_ dan _recall_ merangkum angka-angka ini menjadi lebih banyak metrik intuitif. _Precision_ adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, _Precision_ 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24] dengan formula sebagai berikut:
 
 Formula:
 
 $$ F - MEASURE = {2*(PRECISION*RECALL) \over PRECISION+RECALL} $$
 
 **[6]**
+
+Dengan proses training sebanyak 15 epochs, diperoleh nilai evaluasi sebagai berikut:
+* *Precision* : 0.0427
+* *Recall* : 0.3353
 
 ## Daftra Pustaka
 
