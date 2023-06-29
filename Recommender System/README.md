@@ -1,24 +1,20 @@
 # _Recommender System Submission_
 
 ## 1. _Project Overview_
-
 Perpustakaan sudah merambah ke ranah digital. Keberadaan sistem informasi perpustakaan di perguruan tinggi dapat dirasakan telah memudahkan para pengunjung, baik mahasiswa maupun dosen, dalam mencari bahan referensi yang menjadi koleksi perpustakaan dimaksud **[1]**.
 Saat ini telah banyak sekali buku-buku yang disediakan oleh perpustakaan. Tak jarang buku-buku tersebut tidak sesuai tentang isi yang terdapat pada buku dan cover buku yang terlihat bagus. Oleh karena itu, pengguna platform perpustakaan digital perlu diberikan rasa nyaman dengan memfilter buku-buku yang direkomendasikan kepada user.
 
 ## 2. _Business Understanding_
-
-Meskipun sistem cukup membantu pengunjung dalam mencari buku yang mereka inginkan. Terdapat masalah yang perlu diselesaikan dengan sistem rekomendasi yang akan penulis buat.
-
 ### 2.1 _Problem Statements_
-
-Permasalahannya adalah pengunjung sering terpaku hanya pada judul buku yang mereka inginkan. Ketika buku itu tidak tersedia, tidak ada rekomendasi untuk buku-buku lain yang mungkin menarik untuk dibaca atau bahkan dibutuhkan sebagai pelengkap dari judul buku yang diinginkan. Kondisi ini dapat menyebabkan berkurangnya minat pengunjung untuk mengeksplorasi koleksi perpustakaan lainnya, dan berarti mengecilkan tujuan dan peran perpustakaan di dalam meningkatkan minat baca mahasiswa dan akademisi di perguruan tinggi.
+Dari kondisi yang telah dijelaskan di atas, akan dibuat sebuah sistem rekomendasi untuk menjawab permasalahan berikut:
+* Bagaimana cara memberikan rekomendasi buku yang relevan kepada pengguna berdasarkan preferensi dan perilaku mereka?
+* Bagaimana sistem rekomendasi dapat membantu meningkatkan pengalaman pengguna dalam meminjam buku ?
+* Bagaimana kita dapat memanfaatkan informasi dari pengguna, buku, dan riwayat peminjaman untuk menghasilkan rekomendasi yang personal dan akurat?
 
 ### 2.2 _Goals_
-
 Tujuan dari dibuat nya sistem rekomendasi ini adalah agar dapat membantu pengunjung perpustakaan dalam mencari buku dengan lebih Efektif. Efektif dalam hal merekomendasikan buku terkait yang ditelusuri pengguna berdasarkan preferensi dan rating buku sehingga dapat meningkatkan minat baca mahasiswa dan akademisi diperpustakaan perguruan tinggi.
 
 ### 2.3 _Solution statements_
-
 Solusi dalam menyelesaikan masalah ini yaitu penulis menggunakan algoritma _Content Based Filtering_ dan _Collaborative Filtering_
 
 ![1_aSq9viZGEYiWwL9uJ3Recw](https://user-images.githubusercontent.com/46146748/63115930-5f6c1900-bf66-11e9-894f-ecde5ec531b0.png)
@@ -28,7 +24,6 @@ Solusi dalam menyelesaikan masalah ini yaitu penulis menggunakan algoritma _Cont
 - **_Collaborative Filtering_**. _Collaborative filtering_ merupakan proses penyaringan atau pengevaluasian item menggunakan opini orang lain. _Collaborative filtering_ melakukan penyaringan data berdasarkan kemiripan karakteristik konsumen sehingga mampu memberikan informasi yang baru kepada konsumen karena sistem memberikan informasi berdasarkan pola satu kelompok konsumen menjadikan sumber informasi baru yang mungkin bermanfaat bagi anggota kelompok lainnya.Berikut adalah persamaan _cosine similarity_ yang digunakan untuk menghitung nilai kemiripan diantara item **[3]**.
 
 ## 3 _Data Understanding_
-
 Data ini dapat diunduh pada link dibawah ini
 [Link Dataset](https://www.kaggle.com/arashnic/book-recommendation-dataset)
 
@@ -65,9 +60,7 @@ Pada Dataset _Rating_ berisi variabel
 - Book-Rating (rating buku)
 
 ## 4. _Data Preparation_
-
 ### 4.1 _Data Preprocessing_
-
 Tahapan preprocessing pada laporan ini penting untuk menyatukan ketiga dataset yang penulis gunakan yaitu:
 
 - Book
@@ -77,33 +70,26 @@ Tahapan preprocessing pada laporan ini penting untuk menyatukan ketiga dataset y
 Adapun prosesnya yaitu:
 
 1. Menggabungkan Buku
-
    Pertama, mari kita identifikasi berapa jumlah seluruh buku pada dataset. Di sini, kita menggunakan library numpy dan fungsi concatenate untuk menggabungkan beberapa file. Selanjutnya kita akan menggabungkan seluruh data pada kategori buku. Sehingga, kita akan menggunakan ISBN yang unik sebagai acuan dalam penggabungan ini
 
 2. Menggabungkan Seluruh User
-
    Gunakan fungsi concatenate dari library numpy untuk menggabungkan seluruh data pada kategori variabel User berdasarkan UserId.
 
 3. Ketahui Jumlah Rating
-
    Pada tahapan ini, jumlah rating dapat diketahui dengan menggabungkan dataset rating dan buku
 
 4. Menggabungkan Data dengan fitur judul buku
-
    Pertama, definisikan variabel book_rate dengan variabel rating yang telah kita ketahui sebelumnya. Selanjutnya, untuk mengetahui judul buku dengan ISBN tertentu, mari kita gabungkan data geo yang berisikan ISBN dan judul buku berdasarkan ISBN dan assign ke variabel all_resto_name dengan fungsi merge dari library pandas
 
 5. Menggabungkan Judul buku dengan fitur publisher
-
    Langkah selanjutnya adalah menggabungkan variabel all_book_name yang kita peroleh dari tahapan sebelumnya dengan fitur publisher buku. Tujuannya, agar kita mengetahui publisher yang menerbitkan buku.
 
 kemudian, setelah dilakukan _data preprocessing_ data harus disiapkan terlebih dahulu. Adapun langkah persiapan data yang penulis lakukan yaitu:
 
 1. Mengatasi _missing value_
-
    Setelah ketiga dataset telah berhasil digabungkan, kita cek lagi apakah ada _missing value_. Pada data yang digunakan masih terdapat _missing value_, maka dari itu penulis mengatasi _missing value_ dengan menggunakan perintah dropna().
 
 ## 5. _Modeling_
-
 Penulis memilih 2 model yaitu _content based filtering_ dan _collaborative filtering_.
 
 _Content Based Filtering_ untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**.
@@ -149,7 +135,6 @@ Kekurangan algoritma *Collaborative Filtering*:
 2. Masalah long-tail: Algoritma _collaborative filtering_ mungkin menghadapi tantangan dalam merekomendasikan item yang jarang muncul atau memiliki jumlah ulasan dan penilaian yang terbatas. Ini dikenal sebagai masalah "_long-tail_", di mana algoritma cenderung mengabaikan item dengan popularitas rendah.
 
 ## 6. _Evaluation_
-
 Metrik klasifikasi mengukur seberapa baik sistem rekomendasi
 dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Ambang batas yang lebih masuk akal akan menjadi rata-rata vektor, yaitu, peringkat positif jika lebih besar dari atau sama dengan rata-rata vektor. Ambang batas toleransi menghasilkan skala biner, baik orang tersebut menyukai item (positif) atau tidak (negatif). Demikian juga, rekomendasi bisa benar (_true_) atau salah (_false_). Pengikut metrik menghitung jumlah kemunculan setiap prediksi (p) dan nilai aktual (r)
 

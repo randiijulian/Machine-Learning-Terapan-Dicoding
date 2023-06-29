@@ -47,7 +47,8 @@ Install kaggle and using kaggle API for import public dataset from kaggle
 !kaggle datasets download -d arashnic/book-recommendation-dataset -p "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Recommender System/Dataset"
 !ls
 
-# unzip file and place to folder dataset
+"""unzip file and place to folder dataset"""
+
 !unzip "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Recommender System/Dataset/book-recommendation-dataset.zip" -d "/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Recommender System/Dataset/"
 
 """## Data Understanding
@@ -63,9 +64,8 @@ import pandas as pd
 book = pd.read_csv("/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Recommender System/Dataset/Books.csv")
 book
 
-"""Deskripsi variabel pada dataset"""
+"""Deskripsi variabel pada dataset book"""
 
-#Melihat rangkuman dan deskripsi dataset
 book.info()
 book.describe()
 
@@ -74,6 +74,8 @@ book.describe()
 import pandas as pd
 rating = pd.read_csv("/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Recommender System/Dataset/Ratings.csv")
 rating
+
+"""Deskripsi variabel pada dataset rating"""
 
 rating.info()
 rating.describe()
@@ -84,56 +86,59 @@ import pandas as pd
 user = pd.read_csv("/content/drive/MyDrive/Uni Life's/ML Dicoding/ML Terapan/Recommender System/Dataset/Users.csv")
 user
 
-#mengambil sampel dataset yang akan dilakukan training dan evaluasi sebanyak 25% dari tiap-tiap dataset yang ada
+"""Deskripsi variabel pada dataset user"""
+
+user.info()
+user.describe()
+
+"""Mengambil sampel dataset yang akan digunakan untuk training dan evaluasi dengan rasio 25% pada tiap dataset yang digunakan"""
+
 book = book.sample(frac=0.25)
 user = user.sample(frac=0.25)
 rating = rating.sample(frac=0.25)
 
-#Melihat rangkuman dan deskripsi dataset
-user.info()
-user.describe()
+"""Melakukan penghapusan Image Url pada dataset book"""
 
-# Drop Image Url pada dataset
 book = book.drop(columns=['Image-URL-S','Image-URL-M','Image-URL-L'], axis=0)
 book
 
-#drop nilai NaN pada tiap dataset
+"""Drop data bernilai NaN pada tiap dataset yang digunakan"""
+
 book.dropna(inplace=True)
 rating.dropna(inplace=True)
 user.dropna(inplace=True)
 
-#menampilkan dataset users
-user
+book
 
-#menampilkan dataset rating
 rating
 
-#menampilkan dataset book
-book
+user
 
 """## Data Preparation
 
 ---
 
 ### Data Preprocessing
+
+Melakukan perubahan pada kolom User-ID menjadi UserId karena tidak sesuai format inisialisasi variabel
 """
 
-#mengubah nama pada kolom User-ID menjadi UserId karena tidak sesuai format inisasi variabel
 dict = {'User-ID': 'UserId'
         }
 # call rename () method
 user.rename(columns=dict,
           inplace=True)
 
-#mengubah nama pada kolom User-ID menjadi UserId karena tidak sesuai format inisasi variabel
 dict = {'User-ID': 'UserId'
         }
 # call rename () method
 rating.rename(columns=dict,
           inplace=True)
 
-#Impor library numpy
+"""Melakukan penggabungan seluruh ISBN pada tabel user dan rating serta mengurutkan data dan menghapus data yang sama"""
+
 import numpy as np
+
 # Menggabungkan seluruh ISBN pada tabel users dan rating
 book_n_rating = np.concatenate((
     book.ISBN.unique(),
@@ -144,7 +149,8 @@ book_n_rating = np.concatenate((
 book_n_rating = np.sort(np.unique(book_n_rating))
 print('Jumlah seluruh data buku berdasarkan ISBN: ', len(book_n_rating))
 
-# Menggabungkan seluruh userID
+"""Melakukan penggabungan seluruh UserID serta mengurutkan dan menghapus data yang sama"""
+
 user_all = np.concatenate((
     user.UserId.unique(),
     rating.UserId.unique(),
@@ -155,24 +161,26 @@ user_all = np.sort(np.unique(user_all))
 
 print('Jumlah seluruh user: ', len(user_all))
 
-# Menggabungkan dataframe rating dengan book_recommendation berdasarkan nilai ISBN
+"""Menggabungkan dataframe rating dengan book_recommendation berdasarkan nilai ISBN"""
+
 book_fix = pd.merge(rating, book , on='ISBN', how='left')
 book_fix
 
-# Cek missing value dengan fungsi isnull()
+"""Melakukan pengecekan missing value"""
+
 book_fix.isnull().sum()
 
-#grup ISBN
 book_fix.groupby('ISBN').sum()
 
-# Definisikan dataframe rating ke dalam variabel book_rate
+"""Mendefinisikan dataframe rating kedalam variabel book_rate"""
+
 book_rate = rating
 book_rate
 
-#menampilkan dataset book_fix
 book_fix
 
-#mengubah nama pada kolom dataset book_fix
+"""Mengubah nama pada kolom dataset book_fix"""
+
 dict = {'Book-Rating': 'rate',
         'Book-Title': 'title',
         'Book-Author': 'author',
@@ -183,37 +191,43 @@ dict = {'Book-Rating': 'rate',
 book_fix.rename(columns=dict,
           inplace=True)
 
-#menampilkan data pada tabel book_fix
 book_fix
 
-# Menggabungkan book_rate dengan dataframe book_fix berdasarkan ISBN
+"""Menggabungkan book_rate dengan dataframe book_fix berdasarkan ISBN"""
+
 all_book_name = pd.merge(book_rate, book_fix[['ISBN','title','publisher']], on='ISBN', how='left')
 
-# Print dataframe all_book_name
 all_book_name
 
-#inisiasi variabel baru
+"""Melakukan inisialisasi variabel baru"""
+
 book_all_fix = all_book_name
 book_all_fix
 
-# Mengecek missing value pada dataframe book_all_fix
+"""Melakukan pengecekan missing value pada book_all_fix"""
+
 book_all_fix.isnull().sum()
 
-# Membersihkan missing value dengan fungsi dropna()
+"""Membersihkan data missing value pada book_clean_fix"""
+
 book_clean_fix = book_all_fix.dropna()
 book_clean_fix
 
-# Mengecek kembali missing value pada variabel book_clean_fix
+"""Melakukan pengecekan kembali missing value pada book_clean_fix"""
+
 book_clean_fix.isnull().sum()
 
-# Mengurutkan buku berdasarkan ISBN kemudian memasukkannya ke dalam variabel fix_book_all
+"""Mengurutkan buku berdasarkan ISBN kemudian memasukkannya kedalam fix_book_all"""
+
 fix_book_all = book_clean_fix.sort_values('ISBN', ascending=True)
 fix_book_all
 
-# Mengecek berapa jumlah fix_book_all berdasarkan ISBN
+"""Mengecek jumlah fix_book_all berdasarkan ISBN"""
+
 len(fix_book_all.ISBN.unique())
 
-# Mengecek berapa jumlah fix_book_all berdasarkan publisher
+"""Mengecek jumlah fix_book_all berdasarkan publisher"""
+
 len(fix_book_all.publisher.unique())
 
 dict = {'Book-Rating': 'rate'}
@@ -221,27 +235,27 @@ dict = {'Book-Rating': 'rate'}
 fix_book_all.rename(columns=dict,
           inplace=True)
 
-#menampilkan dataset
 fix_book_all
 
 #mengetahui rating buku lebih dari 8
 fix_book_all[fix_book_all['rate'] >= 8]
 
-# Membuat variabel preparation yang berisi dataframe fix_book_all kemudian mengurutkan berdasarkan ISBN
+"""Membuat variabel preparation yang berisi dataframe fix_book_all kemudian mengurutkan bersarakan ISBN"""
+
 preparation = fix_book_all
 preparation.sort_values('ISBN')
 
-# Membuang data duplikat pada variabel preparation
+"""Membuang data duplikat pada variabel preparation"""
+
 preparation = preparation.drop_duplicates('ISBN')
 preparation
 
-# Mengonversi data series 'ISBN' menjadi dalam bentuk list
+"""Melakukan konversi beberapa data series menjadi dalam bentuk list"""
+
 book_isbn = preparation['ISBN'].tolist()
 
-# Mengonversi data series ‘title’ menjadi dalam bentuk list
 book_title = preparation['title'].tolist()
 
-# Mengonversi data series ‘publisher’ menjadi dalam bentuk list
 book_publisher = preparation['publisher'].tolist()
 
 #cetak total
@@ -249,7 +263,9 @@ print(len(book_isbn))
 print(len(book_title))
 print(len(book_publisher))
 
-# Membuat dictionary untuk data ‘book_id’, ‘book_name’, dan ‘cuisine’
+"""Membuat dictionary untuk data "book_id", "book_name", dan "cuisine"
+"""
+
 book_new = pd.DataFrame({
     'isbn': book_isbn,
     'title': book_title,
@@ -262,12 +278,13 @@ book_new
 ---
 
 
-Melakukan modeling dengan membandingkan beberapa algoritma yang digunakan
+Melakukan modeling dengan membandingkan beberapa algoritma yang digunakan agar dapat mengetahui algoritma yang cocok untuk dataset yang digunakan
 
 ### Content Based Filtering
+
+Melakukan inisialisasi variabel baru
 """
 
-#inisiasi variabel baru
 data = book_new
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -281,28 +298,33 @@ tf.fit(data['publisher'])
 # Mapping array dari fitur index integer ke fitur nama
 tf.get_feature_names_out()
 
-# Melakukan fit lalu ditransformasikan ke bentuk matrix
+"""Melakukan fit lalu ditransformasikan ke bentuk matrix"""
+
 tfidf_matrix = tf.fit_transform(data['publisher'])
 
 # Melihat ukuran matrix tfidf
 tfidf_matrix.shape
 
-# Mengubah vektor tf-idf dalam bentuk matriks dengan fungsi todense()
+"""Mengubah vektor tf-idf dalam bentuk matriks"""
+
 tfidf_matrix.todense()
 
-#membuat dataframe baru berdasarkan fitur yang ada dan vektor tf-idf yang telah diubah dengan fungsi todense()
+"""Membuat datframe baru berdasarkan fitur yang ada dan vektor tf-idf yang telah diubah"""
+
 pd.DataFrame(
     tfidf_matrix.todense(),
     columns=tf.get_feature_names_out(),
     index=data
 ).sample(22, axis=1).sample(10, axis=0)
 
+"""Melakukan penghitungan cosine similarity pada matrix tf-idf"""
+
 from sklearn.metrics.pairwise import cosine_similarity
-# Menghitung cosine similarity pada matrix tf-idf
 cosine_sim = cosine_similarity(tfidf_matrix)
 cosine_sim
 
-# Membuat dataframe dari variabel cosine_sim dengan baris dan kolom berupa nama buku
+"""Membuat dataframe dari variabel cosine_sim dengan baris dan kolom berupa nama buku dan melihat similarity matrix pada setiap buku"""
+
 cosine_sim_df = pd.DataFrame(cosine_sim, index=data['title'], columns=data['title'])
 print('Shape:', cosine_sim_df.shape)
 
@@ -310,9 +332,8 @@ print('Shape:', cosine_sim_df.shape)
 cosine_sim_df.sample(5, axis=1).sample(10, axis=0)
 
 def book_recommendations(nama_buku, similarity_data=cosine_sim_df, items=data[['title', 'publisher']], k=5):
-        # Mengambil data dengan menggunakan argpartition untuk melakukan partisi secara tidak langsung sepanjang sumbu yang diberikan
+    # Mengambil data dengan menggunakan argpartition untuk melakukan partisi secara tidak langsung sepanjang sumbu yang diberikan
     # Dataframe diubah menjadi numpy
-    # Range(start, stop, step)
     index = similarity_data.loc[:,nama_buku].to_numpy().argpartition(
         range(-1, -k, -1))
 
@@ -324,16 +345,22 @@ def book_recommendations(nama_buku, similarity_data=cosine_sim_df, items=data[['
 
     return pd.DataFrame(closest).merge(items).head(k)
 
-#cek apakah data berada dalam tabel yang telah diseleksi
-data[data.title.eq('Hornet Flight: A Novel')]
+"""Melakukan pengecekan apakah data yang berada dalam tabel telah diseleksi"""
 
-# Mendapatkan rekomendasi buku yang mirip dengan Made in America
-# book_recommendations('Hornet Flight: A Novel')
+title = 'Billy Strobe'
 
-"""### Collaborative Filtering"""
+data[data.title.eq(title)]
+
+"""Mendapatkan rekomendasi buku yang mirip dengan Billy Strobe"""
+
+book_recommendations(title, k=20)
+
+"""### Collaborative Filtering
+
+Import necessary library
+"""
 
 # Commented out IPython magic to ensure Python compatibility.
-# Import library
 import pandas as pd
 import numpy as np
 from zipfile import ZipFile
@@ -348,14 +375,16 @@ data = rating
 
 data
 
-#mengubah nama kolom Book-Rating menjadi rate
+"""Mengubah nama column Book-Rating menjadi rate"""
+
 dict = {'Book-Rating': 'rate'}
 # call rename () method
 data.rename(columns=dict,
           inplace=True)
 data
 
-# Mengubah userID menjadi list tanpa nilai yang sama
+"""Mengubah UserID menjadi list tanpa nilai yang sama"""
+
 user_ids = data['UserId'].unique().tolist()
 print('list userID: ', user_ids)
 
@@ -405,7 +434,8 @@ print('Number of User: {}, Number of Book: {}, Min Rating: {}, Max Rating: {}'.f
     num_users, num_book, min_rating, max_rating
 ))
 
-# Mengacak dataset
+"""Melakukan pengacakan dataset"""
+
 data = data.sample(frac=1, random_state=42)
 data
 
@@ -479,23 +509,23 @@ history = model.fit(
     validation_data = (x_val, y_val)
 )
 
-# #Plot Precision dan recall dari data train dan test
-# plt.plot(history.history['precision'])
-# plt.plot(history.history['recall'])
-# plt.title('model_metrics')
-# plt.ylabel('precision and recall')
-# plt.xlabel('epoch')
-# plt.legend(['precision', 'recall'], loc='upper left')
-# plt.show()
+#Plot Precision dan recall dari data train dan test
+plt.plot(history.history['precision'])
+plt.plot(history.history['recall'])
+plt.title('model_metrics')
+plt.ylabel('precision and recall')
+plt.xlabel('epoch')
+plt.legend(['precision', 'recall'], loc='upper left')
+plt.show()
 
-# #Plot Val precision dan recall dari data train dan test
-# plt.plot(history.history['val_precision'])
-# plt.plot(history.history['val_recall'])
-# plt.title('model_metrics')
-# plt.ylabel('val precision and recall')
-# plt.xlabel('epoch')
-# plt.legend(['precision', 'recall'], loc='upper left')
-# plt.show()
+#Plot Val precision dan recall dari data train dan test
+plt.plot(history.history['val_precision'])
+plt.plot(history.history['val_recall'])
+plt.title('model_metrics')
+plt.ylabel('val precision and recall')
+plt.xlabel('epoch')
+plt.legend(['precision', 'recall'], loc='upper left')
+plt.show()
 
 #inisiasi variabel baru
 book_df = book_new
