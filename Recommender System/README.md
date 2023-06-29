@@ -112,6 +112,18 @@ Kelebihan dari pendekatan ini adalah kemampuannya dalam memberikan rekomendasi y
 
 Output dari pendekatan Content-Based Filtering ini adalah daftar produk rekomendasi berdasarkan *keyword* yang dimasukan. Misalnya, pengguna aplikasi melakukan pencarian dengan *keyword* "*fantasy*", maka akan ditampilkan beberapa rekomendasi produk yang relevan dengan *keyword* "*fantasy*".
 
+Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *keyword tittle* dari buku yang terdapat pada dataset, untuk contoh yang penulis gunakan yaitu *keyword* "Billy Strobe".
+Diperoleh top 5 rekomendasi produk berdasarkan keyword tersebut:
+
+Tabel 1. Top 5 rekomendasi buku dengan Content-Based Filtering
+|    |                                             title |             publisher |
+|---:|--------------------------------------------------:|----------------------:|
+|  0 | The Subtle Serpent: A Mystery of Ancient Irela... |           Signet Book |
+|  1 | Murder Can Stunt Your Growth: A Desiree Shapir... |           Signet Book |
+|  2 |                                  The Vulture Fund |           Signet Book |
+|  3 |                                   Blood Relations |           Signet Book |
+|  4 |                             She Walks These Hills |           Signet Book |
+
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
 
 Cara kerja dari *Collaborative Filtering* yaitu:
