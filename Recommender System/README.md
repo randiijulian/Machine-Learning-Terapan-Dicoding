@@ -116,18 +116,18 @@ Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *
 Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 
 Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
-|    |                       title                       |       publisher       |
-|:--:|:-------------------------------------------------:|:---------------------:|
-|  0 | The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
-|  1 | Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
-|  2 | The Vulture Fund                                  |      Signet Book      |
-|  3 | Blood Relations                                   |      Signet Book      |
-|  4 | She Walks These Hills                             |      Signet Book      |
-|  5 | The Rosewood Casket                               |      Signet Book      |
-|  6 | First Offense                                     |      Signet Book      |
-|  7 | First Offense                                     |      Penguin USA      |
-|  8 | Story Bible: The New Testament (Story Bible)      |      Signet Book      |
-|  9 | StarGate: A Novel                                 |      Signet Book      |
+|                       title                       |       publisher       |
+|:-------------------------------------------------:|:---------------------:|
+| The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
+| Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
+| The Vulture Fund                                  |      Signet Book      |
+| Blood Relations                                   |      Signet Book      |
+| She Walks These Hills                             |      Signet Book      |
+| The Rosewood Casket                               |      Signet Book      |
+| First Offense                                     |      Signet Book      |
+| First Offense                                     |      Penguin USA      |
+| Story Bible: The New Testament (Story Bible)      |      Signet Book      |
+| StarGate: A Novel                                 |      Signet Book      |
 
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
 
@@ -139,14 +139,19 @@ Kelebihan dari pendekatan ini adalah kemampuannya dalam menemukan pola preferens
 
 *Output dari* pendekatan ini adalah daftar produk rekomendasi untuk setiap pelanggan. Misalnya, pelanggan B akan menerima rekomendasi berupa daftar produk buku yang banyak disukai oleh pelanggan lain dengan preferensi yang serupa.
 
-Tabel 2. Top 5 rekomendasi buku dengan Content-Based Filtering
-|    |                       title                       |       publisher       |
-|:--:|:-------------------------------------------------:|:---------------------:|
-|  0 | The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
-|  1 | Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
-|  2 | The Vulture Fund                                  |      Signet Book      |
-|  3 | Blood Relations                                   |      Signet Book      |
-|  4 | She Walks These Hills                             |      Signet Book      |
+Tabel 2. Top 1 rekomendasi buku dengan Content-Based Filtering
+|                                             title                                            |       publisher      |
+|:--------------------------------------------------------------------------------------------:|:--------------------:|
+| The Little Prince                                                                            |       Harcourt       |
+| Harry Potter and the Prisoner of Azkaban (Book 3)                                            |      Scholastic      |
+| Harry Potter and the Goblet of Fire (Book 4)                                                 |      Scholastic      |
+| Shiloh (Yearling Newbery)                                                                    |    Yearling Books    |
+| House Atreides (Dune: House Trilogy, Book 1)                                                 |     Bantam Books     |
+| The Bone Collector (Lincoln Rhyme Novels (Hardcover))                                        |     Viking Books     |
+| Mere Christianity                                                                            | Simon &amp; Schuster |
+| The Twilight Before Christmas                                                                |      Pocket Star     |
+| The Golden Mean: In Which the Extraordinary Correspondence of Griffin &amp; Sabine Concludes |    Chronicle Books   |
+| Lies My Teacher Told Me: Everything Your History Textbook Got Wrong                          |       New Press      |
 
 ## 6. _Evaluation_
 Metrik klasifikasi mengukur seberapa baik sistem rekomendasi dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Setelah model berhasil dibuat, akan dilakukan evaluasi dengan menggunakan metrik evaluasi untuk memvalidasi performa model. 
@@ -177,8 +182,8 @@ $$ F - MEASURE = {2*(PRECISION*RECALL) \over PRECISION+RECALL} $$
 **[6]**
 
 Dengan proses training sebanyak 15 epochs, diperoleh nilai evaluasi sebagai berikut:
-* *Precision* : 0.0427
-* *Recall* : 0.3353
+* *Precision* : 0.6721
+* *Recall* : 0.3306
 
 ## Daftra Pustaka
 
