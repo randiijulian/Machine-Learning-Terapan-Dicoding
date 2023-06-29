@@ -167,7 +167,7 @@ dimana:
 * FP (*False Positive*) : jumlah item rekomendasi yang tidak relevan yang dipilih oleh pengguna.
 
 Digunakan 1 pencarian produk secara acak, yaitu:
-1. *"Billy Strobe"*. Dari 20 rekomendasi yang diberikan hampir semuanya relevan. Sehingga nilai presisinya 90%.
+1. *"Billy Strobe"*. Dari 10 rekomendasi yang diberikan terdapat 1 prediksi yang tidak relevan berdasarkan *publisher*. Sehingga nilai presisinya 90%.
 
 Dari hasil pencarian produk di atas, diperoleh nilai akurasi 90% yang berarti semua hasil pencarian memperoleh rekomendasi yang relevan.
 
