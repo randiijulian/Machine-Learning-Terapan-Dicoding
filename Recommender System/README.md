@@ -106,7 +106,11 @@ $$ cosine similarity = {{A . B} \over {||A|| ||B||}} $$
 
 Dengan menghitung *cosine similarity* antara semua pasangan *tittle* buku dan *publisher* buku, kita dapat memperoleh matriks *similarity* antara *tittle* dan *publisher* dalam dataset. Nilai cosine similarity ini dapat digunakan untuk menemukan *tittle* yang paling mirip satu sama lain. Semakin tinggi nilai cosine similarity antara *tittle* dan *publisher*, semakin mirip *tittle* dan *publisher* tersebut.
 
-Dengan menggunakan metode TF-IDF dan Cosine Similarity dalam content-based filtering, kita dapat memperoleh rekomendasi buku yang memiliki kategori yang mirip dengan buku yang sedang ditinjau oleh pengguna. Hal ini memungkinkan sistem rekomendasi untuk mengidentifikasi dan merekomendasikan buku yang memiliki kesamaan konten dengan buku yang disukai oleh pengguna.
+Dengan menggunakan metode TF-IDF dan *Cosine Similarity* dalam *content-based filtering*, kita dapat memperoleh rekomendasi buku yang memiliki kategori yang mirip dengan buku yang sedang ditinjau oleh pengguna. Hal ini memungkinkan sistem rekomendasi untuk mengidentifikasi dan merekomendasikan buku yang memiliki kesamaan konten dengan buku yang disukai oleh pengguna.
+
+Kelebihan dari pendekatan ini adalah kemampuannya dalam memberikan rekomendasi yang relevan berdasarkan konten produk, bahkan bisa menjangkau produk yang baru muncul. Namun kekurangannya adalah kurangnya kemampuan untuk menemukan preferensi pelanggan lain, dan baru bisa memberikan rekomendasi produk buku jika memang pengguna sedang melakukan pencarian dengan *keyword*.
+
+Output dari pendekatan Content-Based Filtering ini adalah daftar produk rekomendasi berdasarkan *keyword* yang dimasukan. Misalnya, pengguna aplikasi melakukan pencarian dengan *keyword* "*fantasy*", maka akan ditampilkan beberapa rekomendasi produk yang relevan dengan *keyword* "*fantasy*".
 
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
 
