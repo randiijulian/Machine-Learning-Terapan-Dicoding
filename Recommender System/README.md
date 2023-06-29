@@ -116,13 +116,13 @@ Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *
 Diperoleh top 5 rekomendasi produk berdasarkan keyword tersebut:
 
 Tabel 1. Top 5 rekomendasi buku dengan Content-Based Filtering
-|    |                                             title |             publisher |
-|---:|--------------------------------------------------:|----------------------:|
-|  0 | The Subtle Serpent: A Mystery of Ancient Irela... |           Signet Book |
-|  1 | Murder Can Stunt Your Growth: A Desiree Shapir... |           Signet Book |
-|  2 |                                  The Vulture Fund |           Signet Book |
-|  3 |                                   Blood Relations |           Signet Book |
-|  4 |                             She Walks These Hills |           Signet Book |
+|    |                       title                       |       publisher       |
+|:--:|:-------------------------------------------------:|:---------------------:|
+|  0 | The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
+|  1 | Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
+|  2 | The Vulture Fund                                  |      Signet Book      |
+|  3 | Blood Relations                                   |      Signet Book      |
+|  4 | She Walks These Hills                             |      Signet Book      |
 
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
 
