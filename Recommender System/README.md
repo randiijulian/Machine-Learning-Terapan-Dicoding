@@ -117,7 +117,7 @@ Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 
 Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
 |                       title                       |       publisher       |
-|:-------------------------------------------------:|:---------------------:|
+| ------------------------------------------------- | --------------------- |
 | The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
 | Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
 | The Vulture Fund                                  |      Signet Book      |
@@ -141,7 +141,7 @@ Kelebihan dari pendekatan ini adalah kemampuannya dalam menemukan pola preferens
 
 Tabel 2. Top 1 rekomendasi buku dengan Content-Based Filtering
 |                                             title                                            |       publisher      |
-|:--------------------------------------------------------------------------------------------:|:--------------------:|
+| -------------------------------------------------------------------------------------------- | -------------------- |
 | The Little Prince                                                                            |       Harcourt       |
 | Harry Potter and the Prisoner of Azkaban (Book 3)                                            |      Scholastic      |
 | Harry Potter and the Goblet of Fire (Book 4)                                                 |      Scholastic      |
