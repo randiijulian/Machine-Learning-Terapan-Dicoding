@@ -596,10 +596,14 @@ Melakukan evaluation terhadap beberapa model algoritma yang digunakan pada tahap
 test_loss = model.evaluate(x_val, y_val)
 print('\ nTest Loss: {}'.format(test_loss))
 
+predict = model.predict(x_val)
+print(predict)
+
 #Define precission and recall value
-precision=0.6537
-recall=0.3765
+precision = 0.6721
+recall = 0.3306
 
 #count f_measuer
 f_measure=2*(precision*recall)/(precision+recall)
 print("F Measure =",f_measure)
+
