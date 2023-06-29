@@ -117,7 +117,7 @@ Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 
 Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
 |                                              title                                              |  publisher  |
-|:-----------------------------------------------------------------------------------------------:|:-----------:|
+| ----------------------------------------------------------------------------------------------- |:-----------:|
 | The Subtle Serpent: A Mystery of Ancient Ireland (Sister Fidelma Mysteries (Paperback))         | Signet Book |
 | Murder Can Stunt Your Growth: A Desiree Shapiro Mystery (Desiree Shapiro Mysteries (Paperback)) | Signet Book |
 | The Vulture Fund                                                                                | Signet Book |
