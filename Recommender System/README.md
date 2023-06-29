@@ -116,18 +116,18 @@ Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *
 Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 
 Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
-|                       title                       |       publisher       |
-| ------------------------------------------------- |:---------------------:|
-| The Subtle Serpent: A Mystery of Ancient Irela... |      Signet Book      |
-| Murder Can Stunt Your Growth: A Desiree Shapir... |      Signet Book      |
-| The Vulture Fund                                  |      Signet Book      |
-| Blood Relations                                   |      Signet Book      |
-| She Walks These Hills                             |      Signet Book      |
-| The Rosewood Casket                               |      Signet Book      |
-| First Offense                                     |      Signet Book      |
-| First Offense                                     |      Penguin USA      |
-| Story Bible: The New Testament (Story Bible)      |      Signet Book      |
-| StarGate: A Novel                                 |      Signet Book      |
+|                                              title                                              |  publisher  |
+|:-----------------------------------------------------------------------------------------------:|:-----------:|
+| The Subtle Serpent: A Mystery of Ancient Ireland (Sister Fidelma Mysteries (Paperback))         | Signet Book |
+| Murder Can Stunt Your Growth: A Desiree Shapiro Mystery (Desiree Shapiro Mysteries (Paperback)) | Signet Book |
+| The Vulture Fund                                                                                | Signet Book |
+| Blood Relations                                                                                 | Signet Book |
+| She Walks These Hills                                                                           | Signet Book |
+| The Rosewood Casket                                                                             | Signet Book |
+| First Offense                                                                                   | Signet Book |
+| First Offense                                                                                   | Penguin USA |
+| Story Bible: The New Testament (Story Bible)                                                    | Signet Book |
+| StarGate: A Novel                                                                               | Signet Book |
 
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. Model yang digunakan pada proyek ini ialah RecommerderNet berbasis TensorFlow untuk mempelajari pola preferensi pelanggan dan interaksi mereka dengan produk. Model ini menggunakan embedding untuk merepresentasikan pelanggan dan produk. Dengan menggabungkan embedding tersebut, kami dapat memprediksi preferensi pelanggan terhadap produk tertentu.
 
