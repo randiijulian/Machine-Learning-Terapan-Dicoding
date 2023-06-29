@@ -96,24 +96,17 @@ Penulis memilih 2 model yaitu _content based filtering_ dan _collaborative filte
 
 _Content Based Filtering_ untuk mendapatkan rekomendasi buku yang mirip dengan yang disukai pembaca. Pengguna sedang membaca buku yang dia sukai, untuk menumbuhkan minat membaca agar membaca dilakukan tidak hanya sekali maka dibutuhkan sistem rekomendasi untuk merekomendasikan bahan bacaan yang serupa dengan yang pengguna baca **[4]**.
 
-Cara kerja dari *Content Based Filtering* yaitu:
-1. Pengumpulan Data: Pertama, atribut-atribut konten dari setiap item (misalnya, buku) dikumpulkan dan direpresentasikan dalam bentuk vektor fitur. Contoh atribut bisa berupa genre buku, penulis, atau kata kunci.
+Dalam pendekatan ini, digunakan metode TF-IDF dan Cosine Similarity untuk memperoleh rekomendasi yang relevan.
 
-2. Pembuatan Profil Pengguna: Profil pengguna dibuat berdasarkan preferensi pengguna atau ulasan sebelumnya. Profil ini juga direpresentasikan dalam vektor fitur yang mirip dengan atribut konten item.
+Pertama, membangun matriks TF-IDF dari kategori *tittle* buku. Matriks ini akan merepresentasikan setiap *tittle* buku dalam dataset sebagai vektor numerik berdasarkan frekuensi kata dalam kategori *tittle* buku tersebut. TF-IDF mengukur seberapa penting suatu kata dalam sebuah dokumen atau konteks. Nilai TF-IDF tinggi menunjukkan kata yang spesifik dan relevan untuk dokumen tersebut. Langkah pertama dalam pembangunan matriks TF-IDF adalah menghitung Term Frequency (TF), yaitu frekuensi kata dalam deskripsi *tittle* buku. Selanjutnya, perlu dihitung Inverse Document Frequency (IDF), yaitu kebalikan dari frekuensi kata di seluruh dokumen. Ini mengurangi bobot kata-kata yang umum dan meningkatkan bobot kata-kata yang jarang muncul. Akhirnya, matriks TF-IDF terbentuk dengan mengalikan nilai TF dengan nilai IDF. Matriks ini akan menjadi representasi numerik dari kategori *tittle* buku dalam dataset.
 
-3. Perhitungan Kesamaan: Menggunakan metrik kesamaan seperti cosine similarity, perhitungan kesamaan antara profil pengguna dan item-item yang tersedia dilakukan. Ini mengukur sejauh mana atribut-atribut konten pengguna dan item cocok.
+Setelah matriks TF-IDF terbentuk, langkah berikutnya adalah menghitung *cosine similarity* antara setiap pasangan *tittle* buku dan *publisher*. *Cosine similarity* mengukur kesamaan antara dua vektor dengan mengukur sudut antara vektor-vektor tersebut. Semakin kecil sudut antara vektor-vektor, semakin mirip buku tersebut. Untuk menghitung *cosine similarity*, dapat digunakan formula *cosine similarity*:
 
-4. Pemeringkatan dan Rekomendasi: Item-item yang memiliki kesamaan yang tinggi dengan profil pengguna mendapatkan peringkat yang lebih tinggi dan direkomendasikan kepada pengguna. Rekomendasi ini didasarkan pada atribut konten yang cocok dengan preferensi pengguna.
+$$ cosine similarity = {{A . B} \over {||A|| ||B||}} $$
 
-Kelebihan algoritma _Content-Based Filtering_:
-1. Tidak memerlukan data riwayat pengguna: Algoritma _content-based filtering_ dapat memberikan rekomendasi berdasarkan informasi konten dari item yang relevan (misalnya, atribut buku seperti genre, penulis, atau kata kunci). Dengan demikian, tidak memerlukan data riwayat pengguna, yang dapat berguna jika ada keterbatasan dalam mengumpulkan riwayat pengguna atau untuk pengguna baru.
+Dengan menghitung *cosine similarity* antara semua pasangan *tittle* buku dan *publisher* buku, kita dapat memperoleh matriks *similarity* antara *tittle* dan *publisher* dalam dataset. Nilai cosine similarity ini dapat digunakan untuk menemukan *tittle* yang paling mirip satu sama lain. Semakin tinggi nilai cosine similarity antara *tittle* dan *publisher*, semakin mirip *tittle* dan *publisher* tersebut.
 
-2. Kemampuan untuk memberikan rekomendasi personalisasi: Algoritma ini dapat menyediakan rekomendasi yang sesuai dengan preferensi individu pengguna. Dengan membandingkan preferensi pengguna dengan atribut konten item, algoritma dapat memilih item yang paling relevan untuk disarankan.
-
-Kekurangan algoritma *Content-Based Filtering*:
-1. Keterbatasan dalam variasi rekomendasi: Algoritma _content-based filtering_ cenderung menghasilkan rekomendasi yang serupa dengan item yang telah disukai oleh pengguna sebelumnya. Ini dapat membatasi variasi rekomendasi dan mengabaikan item-item baru atau berbeda yang mungkin menarik bagi pengguna.
-
-2. Tidak dapat menggambarkan hubungan kompleks antara item: Algoritma ini cenderung berfokus pada atribut konten yang diberikan, seperti genre atau penulis, tetapi tidak secara eksplisit memperhitungkan hubungan yang lebih kompleks antara item. Ini berarti algoritma mungkin tidak dapat merekomendasikan item yang memiliki karakteristik konten yang berbeda tetapi sering digemari oleh pengguna dengan preferensi serupa.
+Dengan menggunakan metode TF-IDF dan Cosine Similarity dalam content-based filtering, kita dapat memperoleh rekomendasi buku yang memiliki kategori yang mirip dengan buku yang sedang ditinjau oleh pengguna. Hal ini memungkinkan sistem rekomendasi untuk mengidentifikasi dan merekomendasikan buku yang memiliki kesamaan konten dengan buku yang disukai oleh pengguna.
 
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. 
 
@@ -148,25 +141,9 @@ dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak ma
 _Precision_ dan _recall_ merangkum angka-angka ini menjadi lebih banyak metrik intuitif. _Precision_ adalah pecahan dari semua peringkat positif yang diklasifikasikan dengan benar seperti itu. Ini mengukur seberapa baik sistem dalam mengenali rekomendasi positif. Untuk misalnya, _Precision_ 60% berarti bahwa pengguna dapat mengharapkan untuk benar-benar menikmati tiga dari setiap lima rekomendasi. Ini mengukur seberapa baik sistem dalam menemukan positif rekomendasi [4], [10], [24]. Misalnya, _Recall_ 80%
 berarti bahwa sistem dapat menebak dengan benar empat dari setiap lima film favorit.
 
-Meskipun _precision_ dan _recall_ adalah _metric_ yang terpisah, tetapi mereka sebenarnya terkait. Biasanya, presisi tinggi berarti daya ingat rendah dan mengingat tinggi berarti presisi rendah. Salah satu cara populer untuk menggabungkan _precision_ dan _recall_ menjadi satu metrik adalah menghitung F-measure, yang merupakan rata-rata harmonik dari keduanya.
-
-Untuk mendapatkan nilai presisi sebesar 60%, perlu menghitung metrik presisi (_precision_) berdasarkan hasil prediksi yang dimiliki. Presisi merupakan rasio dari _true positive_ (positif yang benar) dibagi dengan jumlah total prediksi positif (_true positive_ + _false positive_). Berikut adalah langkah-langkah umum untuk mencapai nilai presisi 60%:
-
-1. Tentukan metrik evaluasi: Dalam hal ini, kita tertarik untuk mendapatkan nilai presisi. Jadi, kita akan fokus pada menghitung presisi.
-
-2. Hitung _true positive_ (TP) dan _false positive_ (FP): _True positive_ adalah jumlah prediksi positif yang benar, sedangkan _false positive_ adalah jumlah prediksi positif yang salah.
-
-3. Tentukan persamaan untuk menghitung presisi: Presisi dapat dihitung menggunakan persamaan berikut:
-   Presisi = TP / (TP + FP)
-
-4. Atur persamaan agar menghasilkan nilai presisi 60%: Misalnya, jika ingin mendapatkan presisi sebesar 60%, maka dapat memodifikasi persamaan menjadi:
-   TP / (TP + FP) = 0.6
-
-5. Selesaikan persamaan untuk mendapatkan nilai TP: Dalam persamaan di atas, TP adalah variabel yang tidak diketahui. Maka perlu mencari nilai TP yang memenuhi persamaan tersebut agar presisinya menjadi 60%.
-
 Formula:
 
-$$ F - MEASURE = {2*(PRECISION*RECALL) \over PRECISION+CALL} $$
+$$ F - MEASURE = {2*(PRECISION*RECALL) \over PRECISION+RECALL} $$
 
 **[6]**
 
