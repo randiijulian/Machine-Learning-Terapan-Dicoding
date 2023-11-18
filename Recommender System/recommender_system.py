@@ -10,7 +10,7 @@ Nama : Randi Julian Saputra
 
 Github : github.com/randiijulian
 
-Dataset :
+[Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset)
 
 ## Project Submission 2 Dicoding Machine Learning Terapan
 **Recommender System**
