@@ -10,7 +10,7 @@ Nama : Randi Julian Saputra
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Predictive%20Analysis/Predictive_Analysis_Submission.ipynb)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/randijulian/)
-[![Github](https://img.shields.io/badge/Open%20In-GitHub-lightgrey?logo=github)](https://github.com/randiijulian)
+[![Github](https://img.shields.io/badge/GitHub-Profile-lightgrey?logo=github)](https://github.com/randiijulian)
 [![Dataset](https://img.shields.io/badge/Dataset-Download-green)](raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv)
 
 ## Project Submission 1 Dicoding Machine Learning Terapan
