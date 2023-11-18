@@ -8,9 +8,13 @@ Original file is located at
 
 Nama : Randi Julian Saputra
 
-Github : github.com/randiijulian
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/github/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Recommender%20System/Recommender_System.ipynb)
 
-[Dataset](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/randijulian/)
+
+[![Github](https://img.shields.io/badge/Open%20In-GitHub-lightgrey?logo=github)](https://github.com/randiijulian)
+
+[![Dataset](https://img.shields.io/badge/Open%20In-Kaggle-blue?logo=kaggle)](https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset)
 
 ## Project Submission 2 Dicoding Machine Learning Terapan
 **Recommender System**
