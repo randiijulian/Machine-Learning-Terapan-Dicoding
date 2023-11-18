@@ -1,4 +1,14 @@
+<div>
+
+<a href="https://colab.research.google.com/github/github/randiijulian/Machine-Learning-Terapan-Dicoding/blob/main/Recommender%20System/Recommender_System.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+<a href="https://www.linkedin.com/in/randijulian"><img src="https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin" alt="LinkedIn"></a>
+<a href="https://github.com/randiijulian"><img src="https://img.shields.io/badge/Open%20In-GitHub-lightgrey?logo=github" alt="Github"></a>
+<a href="raw.githubusercontent.com/tidyverse/ggplot2/master/data-raw/diamonds.csv"><img src="https://img.shields.io/badge/Dataset-logo" alt="Dataset"></a>
+
+</div>
+
 # Predictive Analysis Submission
+
 ## 1. Business Understanding
 ### 1.1 Latar Belakang
 Harga diamonds yang terlalu mahal akan membuat seseorang berpikir berkali-kali untuk memutuskan untuk membeli diamonds. Sebaliknya, harga diamonds yang terlalu murah, akan menyebabkan perusahaan tidak dapat memaksimalkan keuntungan bagi perusahaan, hal ini akan menyebabkan kerugian bagi perusahaan.
