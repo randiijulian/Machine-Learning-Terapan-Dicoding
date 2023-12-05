@@ -57,24 +57,37 @@ Teknik *data preparation* yang dilakukan, yaitu sebagai berikut:
 
 ### 3.1 Exploratory Data Analysis
 #### 3.1.1 Exploratory Data Analysis - Univariate Analysis
+<div align="center">
 
 ![image](https://user-images.githubusercontent.com/81604461/244475132-73c27ede-0132-4b89-ba81-0fc51939493a.png?raw=true)
 
 Gambar 1: visualisasi variabel cut dengan menggunakan histogram
 
+</div>
+
 Berdasarkan hasil visualisasi, kategori ideal pada kolom cut memiliki nilai terginggi dibandingkan dengan kategori lainnya.
+
+<div align="center">
 
 ![image](https://user-images.githubusercontent.com/81604461/244475761-84745941-0b64-44ee-9b2b-25aaad6a385f.png?raw=true)
 
 Gambar 2: visualisasi variabel color dengan menggunakan histogram
 
+</div>
+
 Berdasarkan hasil visualisasi, kategori G pada kolom color memiliki nilai terginggi dibandingkan dengan kategori lainnya.
+
+<div align="center">
 
 ![image](https://user-images.githubusercontent.com/81604461/244476079-66eba612-bf52-48c2-be9d-a517a91084b8.png?raw=true)
 
 Gambar 3: visualisasi numerik variabel dengan menggunakan histogram
 
+</div>
+
 #### 3.1.2 Exploratory Data Analysis - Multivariate Analysis
+
+<div align="center">
 
 ![image](https://user-images.githubusercontent.com/81604461/244476751-276e4658-75ef-4481-8d9f-bcd0c680b095.png?raw=true)
 
@@ -91,6 +104,8 @@ Gambar 6: multivariate analysis antara variabel clarity dengan price
 ![correlation matrix](https://user-images.githubusercontent.com/81604461/244479558-98e283e1-2e41-45da-a742-ac47e8d81da1.png?raw=true)
 
 Gambar 7: Correlation Matrix
+
+</div>
 
 Bila kita lihat, bahwa korelasi variabel depth terhadap price = 0.01 dan korelasi variabel table terhadap price = 0.14.
 
