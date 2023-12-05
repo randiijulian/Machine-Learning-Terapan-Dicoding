@@ -125,6 +125,7 @@ Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *
 Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 
 <div align="center">
+
 Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
 
 |                                              title                                              |  publisher  |
@@ -151,8 +152,10 @@ Dataset yang digunakan dibagi menjadi data traning dan data testing dengan rasio
 Kelebihan dari pendekatan ini adalah kemampuannya dalam menemukan pola preferensi pelanggan yang kompleks dan merekomendasikan produk berdasarkan preferensi serupa dari pelanggan lain. Namun kekurangan dari pendekatan ini adalah adanya masalah *cold-start*, yaitu saat pelanggan baru atau produk baru tidak memiliki cukup interaksi untuk memberikan rekomendasi yang akurat.
 
 *Output dari* pendekatan ini adalah daftar produk rekomendasi untuk setiap pelanggan. Misalnya, pelanggan B akan menerima rekomendasi berupa daftar produk buku yang banyak disukai oleh pelanggan lain dengan preferensi yang serupa.
+<div align="center">
 
 Tabel 2. Top 1 rekomendasi buku dengan Content-Based Filtering
+
 |                                             title                                            |       publisher      |
 | -------------------------------------------------------------------------------------------- |:--------------------:|
 | The Little Prince                                                                            |       Harcourt       |
@@ -165,6 +168,8 @@ Tabel 2. Top 1 rekomendasi buku dengan Content-Based Filtering
 | The Twilight Before Christmas                                                                |      Pocket Star     |
 | The Golden Mean: In Which the Extraordinary Correspondence of Griffin &amp; Sabine Concludes |    Chronicle Books   |
 | Lies My Teacher Told Me: Everything Your History Textbook Got Wrong                          |       New Press      |
+
+</div>
 
 ## 6. _Evaluation_
 Metrik klasifikasi mengukur seberapa baik sistem rekomendasi dalam mengklasifikasikan item dengan benar. Jarak dari ambang toleransi tidak masalah, tapi orang yang berbeda memiliki toleransi perbedaan. Dengan kata lain, kita tidak dapat berasumsi bahwa peringkat di atas dua bintang sudah cukup baik untuk semua orang [2], [5], [12]. Setelah model berhasil dibuat, akan dilakukan evaluasi dengan menggunakan metrik evaluasi untuk memvalidasi performa model. 
