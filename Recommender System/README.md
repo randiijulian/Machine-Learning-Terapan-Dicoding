@@ -28,7 +28,11 @@ Dari kondisi yang telah dijelaskan di atas, akan dibuat sebuah sistem rekomendas
 ### 2.3 _Solution statements_
 Solusi dalam menyelesaikan masalah ini yaitu penulis menggunakan algoritma _Content Based Filtering_ dan _Collaborative Filtering_
 
+<div align="center">
+
 ![1_aSq9viZGEYiWwL9uJ3Recw](https://user-images.githubusercontent.com/46146748/63115930-5f6c1900-bf66-11e9-894f-ecde5ec531b0.png)
+
+</div>
 
 - **_Content Based Filtering_**. Metode _Content-Based Filtering_ bekerja dengan melihat kemiripan item baru dengan item yang sebelumnya. _Content-Based Filtering_ memberikan rekomendasi berdasarkan kemiripan item yang dianalisis dari fitur yang dikandung oleh item sebelumnya **[2]**.
 
