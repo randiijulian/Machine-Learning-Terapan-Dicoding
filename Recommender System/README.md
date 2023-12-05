@@ -125,6 +125,7 @@ Pada dataset yang digunakan oleh penulis dalam proyek ini, penulis menggunakan *
 Diperoleh top 10 rekomendasi produk berdasarkan keyword tersebut:
 <div align="center">
 Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
+</div>
 |                                              title                                              |  publisher  |
 | ----------------------------------------------------------------------------------------------- |:-----------:|
 | The Subtle Serpent: A Mystery of Ancient Ireland (Sister Fidelma Mysteries (Paperback))         | Signet Book |
@@ -137,7 +138,7 @@ Tabel 1. Top 10 rekomendasi buku dengan Content-Based Filtering
 | First Offense                                                                                   | Penguin USA |
 | Story Bible: The New Testament (Story Bible)                                                    | Signet Book |
 | StarGate: A Novel                                                                               | Signet Book |
-</div>
+
 _Collaborative Filtering_ untuk mencari rating buku dan direkomendasikan ke pembaca. Agar kualitas bahan bacaan pengguna tinggi dibutuhkan rekomendasi dari pengguna lain berdasarkan rating **[5]**. Model yang digunakan pada proyek ini ialah RecommerderNet berbasis TensorFlow untuk mempelajari pola preferensi pelanggan dan interaksi mereka dengan produk. Model ini menggunakan embedding untuk merepresentasikan pelanggan dan produk. Dengan menggabungkan embedding tersebut, kami dapat memprediksi preferensi pelanggan terhadap produk tertentu.
 
 Berbeda dengan pendekatan *Content-Based Filtering* yang hanya menggunakan data informasi tentang produk saja, pendekatan ini akan menggunakan data pelanggan juga.
